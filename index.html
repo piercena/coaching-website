@@ -86,13 +86,6 @@
     .m3-shadow-2 { box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.06), 0px 2px 8px rgba(0, 0, 0, 0.03); }
     .m3-shadow-3 { box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.08), 0px 4px 16px rgba(0, 0, 0, 0.04); }
   </style>
-
-  <!-- Cal.com Embed Script -->
-  <script type="text/javascript">
-    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.q) { cal.q = []; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-    Cal("init", {origin:"https://cal.com"});
-    Cal("ui", {"styles":{"branding":{"brandColor":"#C4342B"}},"hideEventTypeDetails":false,"layout":"month_view"});
-  </script>
 </head>
 <body class="h-full flex flex-col font-sans" id="app-root">
 
@@ -113,9 +106,9 @@
       <a href="#philosophy" class="text-m3-on-surface-variant hover:text-m3-primary transition-colors">Philosophy</a>
       <a href="#method" class="text-m3-on-surface-variant hover:text-m3-primary transition-colors">The Method</a>
       <a href="#daily-insights" class="text-m3-on-surface-variant hover:text-m3-primary transition-colors">Daily Insights</a>
-      <button data-cal-link="nicholas-pierce-mcbbsl/30min" data-cal-config='{"layout":"month_view"}' class="px-5 py-2.5 rounded-m3-full bg-m3-primary text-sm font-semibold transition-transform hover:scale-[1.02] active:scale-95 shadow-sm text-white cursor-pointer">
+      <a href="https://cal.com/nicholas-pierce-mcbbsl/30min" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-m3-full bg-m3-primary text-sm font-semibold transition-transform hover:scale-[1.02] active:scale-95 shadow-sm text-white cursor-pointer inline-flex items-center justify-center">
         Book a Call
-      </button>
+      </a>
     </nav>
 
     <!-- Mobile menu toggle button -->
@@ -130,9 +123,9 @@
       <a href="#philosophy" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant">Philosophy</a>
       <a href="#method" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant">The Method</a>
       <a href="#daily-insights" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant">Daily Insights</a>
-      <button data-cal-link="nicholas-pierce-mcbbsl/30min" data-cal-config='{"layout":"month_view"}' class="w-full text-center py-3 rounded-m3-full bg-m3-primary font-semibold text-white cursor-pointer">
+      <a href="https://cal.com/nicholas-pierce-mcbbsl/30min" target="_blank" rel="noopener noreferrer" class="w-full text-center py-3 rounded-m3-full bg-m3-primary font-semibold text-white block">
         Book a Call
-      </button>
+      </a>
     </div>
   </div>
 
@@ -158,12 +151,12 @@
             Being stuck isn’t a dead end. It's a wake-up call! But the most dangerous place to be is wondering why the magic of life is gone and why it isn't coming back.
           </p>
 
-          <!-- CTAs (Corrected to prioritize Booking over Newsletter in Hero) -->
+          <!-- CTAs -->
           <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
-            <button data-cal-link="nicholas-pierce-mcbbsl/30min" data-cal-config='{"layout":"month_view"}' class="px-8 py-4 rounded-m3-full bg-m3-accent hover:opacity-90 text-m3-on-accent text-base font-semibold transition-all shadow-md flex items-center justify-center space-x-3 group cursor-pointer">
+            <a href="https://cal.com/nicholas-pierce-mcbbsl/30min" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-m3-full bg-m3-accent hover:opacity-90 text-m3-on-accent text-base font-semibold transition-all shadow-md flex items-center justify-center space-x-3 group cursor-pointer">
               <span>Schedule 1:1 Conversation</span>
               <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
-            </button>
+            </a>
             <a href="#daily-insights" class="px-8 py-4 rounded-m3-full border-2 border-m3-primary text-m3-primary hover:bg-m3-surface-variant text-base font-semibold transition-colors flex items-center justify-center space-x-2">
               <span>Receive Daily Reflections</span>
               <span class="material-symbols-outlined text-lg">mail</span>
@@ -338,10 +331,10 @@
               Pick a time directly from my live calendar that fits your schedule.
             </p>
 
-            <button data-cal-link="nicholas-pierce-mcbbsl/30min" data-cal-config='{"layout":"month_view"}' class="w-full py-4 rounded-m3-full bg-m3-accent text-m3-on-accent font-semibold hover:opacity-90 transition-all text-sm flex items-center justify-center space-x-2 shadow-md cursor-pointer">
+            <a href="https://cal.com/nicholas-pierce-mcbbsl/30min" target="_blank" rel="noopener noreferrer" class="w-full py-4 rounded-m3-full bg-m3-accent text-m3-on-accent font-semibold hover:opacity-90 transition-all text-sm flex items-center justify-center space-x-2 shadow-md cursor-pointer">
               <span class="material-symbols-outlined text-sm">schedule</span>
               <span>Open Cal.com Scheduler</span>
-            </button>
+            </a>
 
             <div class="text-center text-xs text-m3-on-surface-variant opacity-75">
               Powered by Cal.com • Instant synchronization

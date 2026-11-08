@@ -8,7 +8,7 @@
   <!-- Google Fonts & Material Symbols -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
   
   <!-- Tailwind CSS CDN -->
@@ -17,89 +17,94 @@
     tailwind.config = {
       theme: {
         extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
           colors: {
-            'm3-surface': '#12181D',
-            'm3-surface-variant': '#1E262C',
-            'm3-on-surface': '#F2ECE1',
-            'm3-on-surface-variant': '#A6B0B8',
+            'm3-surface': '#FCFAF7',
+            'm3-surface-variant': '#EAE3D5',
+            'm3-on-surface': '#1C2024',
+            'm3-on-surface-variant': '#454E56',
             'm3-accent': '#C4342B',
-            'm3-on-accent': '#FFFFFF',
-            'm3-primary': '#3E7C74',
-            'm3-outline': '#2A343D',
+            'm3-on-accent': '#F4EFE6',
+            'm3-primary': '#12181D',
+            'm3-outline': '#D0C6B5',
           },
           borderRadius: {
-            'm3-lg': '0.75rem',
-            'm3-xl': '1rem',
+            'm3-lg': '16px',
+            'm3-xl': '24px',
             'm3-full': '9999px',
           },
           boxShadow: {
-            'm3-2': '0 4px 20px rgba(0, 0, 0, 0.4)',
+            'm3-2': '0px 6px 20px rgba(0, 0, 0, 0.06), 0px 2px 8px rgba(0, 0, 0, 0.03)',
           }
         }
       }
     }
   </script>
   <style>
-    body { font-family: 'Inter', sans-serif; background-color: #12181D; color: #F2ECE1; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F4EFE6; color: #1C2024; }
   </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between selection:bg-m3-accent selection:text-white">
+<body class="min-h-screen flex flex-col justify-between selection:bg-m3-accent selection:text-white pt-24">
 
   <!-- TOP NAVIGATION BAR -->
-  <header class="w-full border-b border-m3-outline px-6 py-4 flex items-center justify-between max-w-5xl mx-auto">
-    <a href="index.html" class="font-bold text-lg tracking-tight text-m3-on-surface flex items-center space-x-2">
-      <span class="material-symbols-outlined text-m3-accent">bolt</span>
-      <span>Momentum</span>
-    </a>
-    <nav class="flex items-center space-x-6">
-      <a href="index.html#method" class="text-sm font-medium text-m3-on-surface-variant hover:text-m3-on-surface transition-colors">Framework</a>
-      <a href="index.html#offer" class="text-sm font-medium text-m3-on-surface-variant hover:text-m3-on-surface transition-colors">The Sprint</a>
-      <a href="https://cal.com/nicholas-pierce-mcbbsl/30min" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-m3-full bg-m3-accent text-m3-on-accent text-sm font-semibold hover:opacity-90 transition-all shadow-md">Clarity Call</a>
-    </nav>
+  <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#F4EFE6]/90 border-b border-m3-outline/40 py-4 px-6 sm:px-12 transition-all">
+    <div class="max-w-5xl mx-auto w-full flex items-center justify-between">
+      <a href="index.html" class="font-bold text-base text-m3-on-surface flex items-center space-x-2">
+        <span class="material-symbols-outlined text-m3-accent">bolt</span>
+        <span>Nick Pierce</span>
+      </a>
+      <nav class="flex items-center space-x-6 text-sm font-medium">
+        <a href="index.html#method" class="text-m3-on-surface-variant hover:text-m3-primary transition-colors">Framework</a>
+        <a href="index.html#offer" class="text-m3-on-surface-variant hover:text-m3-primary transition-colors">Momentum</a>
+        <a href="https://cal.com/nicholas-pierce-mcbbsl/30min" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-m3-full bg-m3-accent text-m3-on-accent text-sm font-semibold hover:opacity-90 transition-all shadow-md">Clarity Call</a>
+      </nav>
+    </div>
   </header>
 
   <!-- MAIN AUDIT SECTION -->
   <main class="py-12 sm:py-20 px-6 max-w-3xl mx-auto w-full flex-grow">
-    <div class="bg-m3-surface-variant p-8 sm:p-12 rounded-m3-xl border border-m3-outline space-y-8 m3-shadow-2">
+    <div class="bg-m3-surface p-8 sm:p-12 rounded-m3-xl border border-m3-outline space-y-8 m3-shadow-2">
       
       <div class="space-y-3 text-center">
         <span class="text-xs uppercase tracking-widest text-m3-accent font-bold">Interactive Diagnostic</span>
-        <h1 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-m3-on-surface">The Analysis Paralysis Audit</h1>
+        <h1 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-m3-on-surface">Where are you over-analyzing?</h1>
         <p class="text-sm sm:text-base text-m3-on-surface-variant max-w-lg mx-auto leading-relaxed">
-          Check all the cognitive bottlenecks that currently apply to your workflow to instantly calculate your execution velocity score.
+          Check any of the friction points below that are currently keeping you stuck. See how much cognitive energy you're burning in preparation.
         </p>
       </div>
 
       <!-- Audit Form Checklist -->
       <form id="audit-form" class="space-y-4">
-        <label class="flex items-start space-x-3 p-4 rounded-m3-lg bg-m3-surface border border-m3-outline cursor-pointer hover:border-m3-primary transition-all">
+        <label class="flex items-start space-x-3 p-4 rounded-m3-lg bg-m3-surface-variant border border-m3-outline cursor-pointer hover:border-m3-primary transition-all">
           <input type="checkbox" name="bottleneck" value="1" class="mt-1 h-4 w-4 rounded border-m3-outline text-m3-accent focus:ring-m3-accent">
-          <span class="text-sm text-m3-on-surface"><strong>1. The Certainty Trap:</strong> Delaying key initiatives until every edge case and contingency is resolved.</span>
+          <span class="text-sm text-m3-on-surface"><strong>1. Waiting for 100% Certainty:</strong> Delaying a choice because you want guarantees that every outcome will go smoothly.</span>
         </label>
 
-        <label class="flex items-start space-x-3 p-4 rounded-m3-lg bg-m3-surface border border-m3-outline cursor-pointer hover:border-m3-primary transition-all">
+        <label class="flex items-start space-x-3 p-4 rounded-m3-lg bg-m3-surface-variant border border-m3-outline cursor-pointer hover:border-m3-primary transition-all">
           <input type="checkbox" name="bottleneck" value="1" class="mt-1 h-4 w-4 rounded border-m3-outline text-m3-accent focus:ring-m3-accent">
-          <span class="text-sm text-m3-on-surface"><strong>2. Over-Architecting:</strong> Spending hours building complex tools or roadmaps before executing the core task.</span>
+          <span class="text-sm text-m3-on-surface"><strong>2. Over-Complicating the Setup:</strong> Spending hours planning, organizing, or building elaborate systems before taking actual steps.</span>
         </label>
 
-        <label class="flex items-start space-x-3 p-4 rounded-m3-lg bg-m3-surface border border-m3-outline cursor-pointer hover:border-m3-primary transition-all">
+        <label class="flex items-start space-x-3 p-4 rounded-m3-lg bg-m3-surface-variant border border-m3-outline cursor-pointer hover:border-m3-primary transition-all">
           <input type="checkbox" name="bottleneck" value="1" class="mt-1 h-4 w-4 rounded border-m3-outline text-m3-accent focus:ring-m3-accent">
-          <span class="text-sm text-m3-on-surface"><strong>3. Research as Procrastination:</strong> Reading books, docs, or consulting stakeholders instead of pulling the trigger.</span>
+          <span class="text-sm text-m3-on-surface"><strong>3. Research as an Escape:</strong> Reading articles, buying books, or asking others for opinions instead of just pulling the trigger.</span>
         </label>
 
-        <label class="flex items-start space-x-3 p-4 rounded-m3-lg bg-m3-surface border border-m3-outline cursor-pointer hover:border-m3-primary transition-all">
+        <label class="flex items-start space-x-3 p-4 rounded-m3-lg bg-m3-surface-variant border border-m3-outline cursor-pointer hover:border-m3-primary transition-all">
           <input type="checkbox" name="bottleneck" value="1" class="mt-1 h-4 w-4 rounded border-m3-outline text-m3-accent focus:ring-m3-accent">
-          <span class="text-sm text-m3-on-surface"><strong>4. Micro-Friction Avoidance:</strong> Spending high-energy hours on low-leverage tasks because the main goal feels ambiguous.</span>
+          <span class="text-sm text-m3-on-surface"><strong>4. Avoiding the Real Work:</strong> Filling your day with safe, minor tasks because the actual challenge feels too big or ambiguous.</span>
         </label>
 
-        <label class="flex items-start space-x-3 p-4 rounded-m3-lg bg-m3-surface border border-m3-outline cursor-pointer hover:border-m3-primary transition-all">
+        <label class="flex items-start space-x-3 p-4 rounded-m3-lg bg-m3-surface-variant border border-m3-outline cursor-pointer hover:border-m3-primary transition-all">
           <input type="checkbox" name="bottleneck" value="1" class="mt-1 h-4 w-4 rounded border-m3-outline text-m3-accent focus:ring-m3-accent">
-          <span class="text-sm text-m3-on-surface"><strong>5. Solitary Problem Solving:</strong> Running the same mental models in isolation without external accountability.</span>
+          <span class="text-sm text-m3-on-surface"><strong>5. Spinning in Your Head:</strong> Re-running the same scenarios inside your mind over and over without any outside perspective to break the loop.</span>
         </label>
       </form>
 
       <!-- Results Box (Hidden by Default) -->
-      <div id="audit-results" class="hidden bg-m3-surface p-6 sm:p-8 rounded-m3-lg border-2 border-m3-accent space-y-4 text-center">
+      <div id="audit-results" class="hidden bg-m3-surface-variant p-6 sm:p-8 rounded-m3-lg border-2 border-m3-accent space-y-4 text-center">
         <div class="space-y-1">
           <span class="text-xs font-bold uppercase tracking-widest text-m3-accent">Your Diagnostic Result</span>
           <h2 id="result-title" class="text-xl font-bold text-m3-on-surface">--</h2>
@@ -118,7 +123,7 @@
 
   <!-- FOOTER -->
   <footer class="w-full border-t border-m3-outline py-6 px-6 text-center text-xs text-m3-on-surface-variant">
-    <p>&copy; 2026 Momentum Sprint. All rights reserved.</p>
+    <p>&copy; 2026 Nick Pierce. All rights reserved.</p>
   </footer>
 
   <!-- Calculation Script -->
@@ -140,14 +145,14 @@
         resultsBox.classList.remove('hidden');
 
         if (checkedCount <= 1) {
-          resultTitle.textContent = "Score: High Velocity Operator (0–1 Bottlenecks)";
-          resultDescription.textContent = "Your execution engine is clean. You process uncertainty efficiently, though minor friction points may occasionally appear.";
+          resultTitle.textContent = "Score: High Velocity (0–1 Friction Points)";
+          resultDescription.textContent = "Your momentum is steady. You process uncertainty well and translate choices into action without getting bogged down.";
         } else if (checkedCount <= 3) {
-          resultTitle.textContent = "Score: High-Risk Analysis Loop (2–3 Bottlenecks)";
-          resultDescription.textContent = "You are actively leaking cognitive energy. Your intelligence is creating unnecessary friction, causing high-priority projects to stall.";
+          resultTitle.textContent = "Score: Caught in the Loop (2–3 Friction Points)";
+          resultDescription.textContent = "You are burning valuable energy on over-thinking. You want to move forward, but unnecessary perfectionism is holding you back.";
         } else {
-          resultTitle.textContent = "Score: Severe Execution Paralysis (4–5 Bottlenecks)";
-          resultDescription.textContent = "You are trapped in an infinite loop of over-analysis. You are burning out by managing preparation instead of taking forward action.";
+          resultTitle.textContent = "Score: Severe Execution Stall (4–5 Friction Points)";
+          resultDescription.textContent = "You are trapped in an infinite cycle of preparation and planning. You need external structure to break the pattern and start executing.";
         }
       });
     });

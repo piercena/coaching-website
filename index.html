@@ -53,7 +53,7 @@
       --color-accent: #C4342B;
       --color-on-accent: #F4EFE6;
       --color-secondary: #3E7C74;
-      --color-secondary-container: #E2EFEF;
+      --color-secondary-container: #E2E8F0;
       --color-on-secondary-container: #1C403B;
       --color-outline: #D0C6B5;
     }
@@ -87,38 +87,40 @@
     .m3-shadow-3 { box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.08), 0px 4px 16px rgba(0, 0, 0, 0.04); }
   </style>
 </head>
-<body class="h-full flex flex-col font-sans" id="app-root">
+<body class="h-full flex flex-col font-sans pt-24" id="app-root">
 
-  <!-- Navigation Header -->
-  <header class="sticky top-0 z-50 backdrop-blur-md bg-[#F4EFE6]/90 border-b border-m3-outline/40 py-4 px-6 sm:px-12 max-w-7xl mx-auto w-full flex items-center justify-between transition-all">
-    <a href="#" class="flex items-center space-x-3 group">
-      <div class="w-10 h-10 rounded-m3-lg bg-m3-primary flex items-center justify-center font-bold text-lg shadow-sm text-white">
-        NP
-      </div>
-      <div class="flex flex-col">
-        <span class="font-bold tracking-tight text-lg leading-tight text-m3-on-surface">Nick Pierce</span>
-        <span class="text-xs tracking-wider uppercase text-m3-secondary font-semibold">Forward Gear Only</span>
-      </div>
-    </a>
-
-    <!-- Navigation Links & Booking CTA -->
-    <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
-      <a href="#philosophy" class="text-m3-on-surface-variant hover:text-m3-primary transition-colors">Philosophy</a>
-      <a href="#method" class="text-m3-on-surface-variant hover:text-m3-primary transition-colors">The Method</a>
-      <a href="#daily-insights" class="text-m3-on-surface-variant hover:text-m3-primary transition-colors">Daily Insights</a>
-      <a href="https://cal.com/nicholas-pierce-mcbbsl/30min" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-m3-full bg-m3-primary text-sm font-semibold transition-transform hover:scale-[1.02] active:scale-95 shadow-sm text-white cursor-pointer inline-flex items-center justify-center">
-        Book a Call
+  <!-- Navigation Header (Fixed Global) -->
+  <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#F4EFE6]/90 border-b border-m3-outline/40 py-4 px-6 sm:px-12 transition-all">
+    <div class="max-w-7xl mx-auto w-full flex items-center justify-between">
+      <a href="#" class="flex items-center space-x-3 group">
+        <div class="w-10 h-10 rounded-m3-lg bg-m3-primary flex items-center justify-center font-bold text-lg shadow-sm text-white">
+          NP
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold tracking-tight text-lg leading-tight text-m3-on-surface">Nick Pierce</span>
+          <span class="text-xs tracking-wider uppercase text-m3-secondary font-semibold">Forward Gear Only</span>
+        </div>
       </a>
-    </nav>
 
-    <!-- Mobile menu toggle button -->
-    <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-lg bg-m3-surface-variant text-m3-on-surface" aria-label="Toggle Navigation Menu">
-      <span class="material-symbols-outlined">menu</span>
-    </button>
+      <!-- Navigation Links & Booking CTA -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+        <a href="#philosophy" class="text-m3-on-surface-variant hover:text-m3-primary transition-colors">Philosophy</a>
+        <a href="#method" class="text-m3-on-surface-variant hover:text-m3-primary transition-colors">The Method</a>
+        <a href="#daily-insights" class="text-m3-on-surface-variant hover:text-m3-primary transition-colors">Daily Insights</a>
+        <a href="https://cal.com/nicholas-pierce-mcbbsl/30min" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-m3-full bg-m3-primary text-sm font-semibold transition-transform hover:scale-[1.02] active:scale-95 shadow-sm text-white cursor-pointer inline-flex items-center justify-center">
+          Book a Call
+        </a>
+      </nav>
+
+      <!-- Mobile menu toggle button -->
+      <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-lg bg-m3-surface-variant text-m3-on-surface" aria-label="Toggle Navigation Menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
   </header>
 
   <!-- Mobile Dropdown Navigation -->
-  <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 pt-2 bg-m3-surface border-b border-m3-outline">
+  <div id="mobile-menu" class="hidden md:hidden fixed top-[73px] left-0 right-0 z-40 px-6 pb-6 pt-2 bg-m3-surface border-b border-m3-outline shadow-lg">
     <div class="flex flex-col space-y-4 font-medium text-sm">
       <a href="#philosophy" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant">Philosophy</a>
       <a href="#method" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant">The Method</a>

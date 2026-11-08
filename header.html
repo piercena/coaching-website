@@ -43,26 +43,26 @@
 </header>
 
 <!-- Mobile Dropdown Navigation -->
-<div id="mobile-menu" class="hidden md:hidden fixed top-[73px] left-0 right-0 z-40 px-6 pb-6 pt-2 bg-m3-surface border-b border-m3-outline shadow-lg">
-  <!-- Mobile Dropdown Navigation -->
-<div id="mobile-menu" class="hidden md:hidden fixed top-[73px] left-0 right-0 z-40 px-6 pb-6 pt-2 bg-m3-surface border-b border-m3-outline shadow-lg">
-  <div class="flex flex-col space-y-4 font-medium text-sm">
-    <a href="index.html#philosophy" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant">Philosophy</a>
-    <a href="index.html#method" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant">The Method</a>
+<div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 z-50 px-6 py-6 bg-m3-surface border-b border-m3-outline shadow-xl max-h-[calc(100vh-80px)] overflow-y-auto">
+  <div class="flex flex-col space-y-4 font-medium text-base">
+    <a href="index.html#philosophy" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant hover:text-m3-primary py-1">Philosophy</a>
+    <a href="index.html#method" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant hover:text-m3-primary py-1">The Method</a>
     
     <!-- Mobile Offerings Sub-list -->
-    <div class="pl-4 border-l-2 border-m3-outline flex flex-col space-y-3 py-1">
+    <div class="pl-4 border-l-2 border-m3-outline flex flex-col space-y-3 py-2">
       <span class="text-xs uppercase tracking-widest text-m3-accent font-bold">Offerings</span>
-      <a href="index.html#offer" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant">Momentum</a>
-      <a href="audit.html" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant">Analysis Audit</a>
-      <a href="meditation.html" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant">Freedom from Anxiety Meditation</a>
+      <a href="index.html#offer" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant hover:text-m3-primary">Momentum</a>
+      <a href="audit.html" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant hover:text-m3-primary">Analysis Audit</a>
+      <a href="meditation.html" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant hover:text-m3-primary">Freedom from Anxiety Meditation</a>
     </div>
 
-    <a href="index.html#newsletter" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant">Newsletter</a>
-    <a href="about.html" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant">About</a>
-    <a href="https://cal.com/nicholas-pierce-mcbbsl/30min" target="_blank" rel="noopener noreferrer" onclick="toggleMobileMenu()" class="w-full text-center py-3 rounded-m3-full bg-m3-primary font-semibold text-white block">
-      Book a Call
-    </a>
+    <a href="index.html#newsletter" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant hover:text-m3-primary py-1">Newsletter</a>
+    <a href="about.html" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant hover:text-m3-primary py-1">About</a>
+    
+    <div class="pt-2">
+      <a href="https://cal.com/nicholas-pierce-mcbbsl/30min" target="_blank" rel="noopener noreferrer" onclick="toggleMobileMenu()" class="w-full text-center py-3.5 rounded-m3-full bg-m3-primary font-semibold text-white block shadow-sm">
+        Book a Call
+      </a>
+    </div>
   </div>
-</div>
 </div>

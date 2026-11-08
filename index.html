@@ -95,6 +95,17 @@
     .m3-shadow-1 { box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 4px 12px rgba(0, 0, 0, 0.02); }
     .m3-shadow-2 { box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.06), 0px 2px 8px rgba(0, 0, 0, 0.03); }
     .m3-shadow-3 { box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.08), 0px 4px 16px rgba(0, 0, 0, 0.04); }
+
+    @keyframes spin-slow {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes spin-reverse {
+      0% { transform: rotate(360deg); }
+      100% { transform: rotate(0deg); }
+    }
+    .animate-spin-slow { animation: spin-slow 12s linear infinite; }
+    .animate-spin-reverse { animation: spin-reverse 15s linear infinite; }
   </style>
 </head>
 <body class="h-full flex flex-col font-sans pt-24" id="app-root">
@@ -167,43 +178,78 @@
 
   <main class="flex-grow">
     
-    <!-- HERO SECTION (CENTERED) -->
-    <section id="philosophy" class="py-16 sm:py-28 px-6 sm:px-12 max-w-4xl mx-auto text-center space-y-8">
+    <!-- HERO SECTION (SPLIT LAYOUT WITH KINETIC LOOP BREAKER) -->
+    <section id="philosophy" class="py-16 sm:py-24 px-6 sm:px-12 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Left Column: Headline & CTAs -->
+      <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-m3-on-surface leading-[1.12]">
+          Reflect on the past.<br>
+          Be with the present.<br>
+          <span class="font-serif italic font-normal text-m3-accent">Take action</span> for your future.
+        </h1>
 
-      <!-- Main Headline -->
-      <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-m3-on-surface leading-[1.12]">
-        Reflect on the past.<br>
-        Be with the present.<br>
-        <span class="font-serif italic font-normal text-m3-accent">Take action</span> for your future.
-      </h1>
+        <p class="text-lg sm:text-xl text-m3-on-surface-variant max-w-2xl font-normal leading-relaxed mx-auto lg:mx-0">
+          Stuck isn't a dead end. It's a wake up call that you're ready for more. Stop waiting for 100% certainty. Let’s translate that ambition into forward momentum right now.
+        </p>
 
-      <!-- Body Copy -->
-      <p class="text-lg sm:text-xl text-m3-on-surface-variant max-w-2xl mx-auto font-normal leading-relaxed">
-        Stuck isn't a dead end. It's a wake up call that you're ready for more. Stop waiting for 100% certainty. Let’s translate that ambition into forward momentum right now.
-      </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+          <a href="https://cal.com/nicholas-pierce-mcbbsl/30min" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-m3-full bg-m3-accent hover:opacity-90 text-m3-on-accent text-base font-semibold transition-all shadow-md flex items-center justify-center space-x-3 group cursor-pointer">
+            <span>Schedule 1:1 Conversation</span>
+            <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </a>
+          
+          <a href="#offer" class="w-full sm:w-auto px-8 py-4 rounded-m3-full border-2 border-m3-primary/80 hover:border-m3-primary text-m3-primary hover:bg-m3-surface-variant/60 text-base font-semibold transition-all flex items-center justify-center space-x-2 shadow-sm">
+            <span>View Momentum</span>
+            <span class="material-symbols-outlined text-lg">arrow_downward</span>
+          </a>
+        </div>
 
-      <!-- Centered Dual Call-To-Actions -->
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-        <a href="https://cal.com/nicholas-pierce-mcbbsl/30min" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-m3-full bg-m3-accent hover:opacity-90 text-m3-on-accent text-base font-semibold transition-all shadow-md flex items-center justify-center space-x-3 group cursor-pointer">
-          <span>Schedule 1:1 Conversation</span>
-          <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
-        </a>
-        
-        <a href="#offer" class="w-full sm:w-auto px-8 py-4 rounded-m3-full border-2 border-m3-primary/80 hover:border-m3-primary text-m3-primary hover:bg-m3-surface-variant/60 text-base font-semibold transition-all flex items-center justify-center space-x-2 shadow-sm">
-          <span>View Momentum</span>
-          <span class="material-symbols-outlined text-lg">arrow_downward</span>
-        </a>
+        <div class="pt-6 border-t border-m3-outline/60 flex flex-wrap items-center justify-center lg:justify-start gap-6 sm:gap-10 text-xs text-m3-on-surface-variant font-medium">
+          <div class="flex items-center space-x-2">
+            <span class="material-symbols-outlined text-m3-secondary text-base">check_circle</span>
+            <span>No 'BS' Leadership Coaching</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <span class="material-symbols-outlined text-m3-secondary text-base">check_circle</span>
+            <span>Momentum Over Perfection</span>
+          </div>
+        </div>
       </div>
 
-      <!-- Key Guiding Principles -->
-      <div class="pt-8 border-t border-m3-outline/60 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs text-m3-on-surface-variant font-medium">
-        <div class="flex items-center space-x-2">
-          <span class="material-symbols-outlined text-m3-secondary text-base">check_circle</span>
-          <span>No 'BS' Leadership Coaching</span>
-        </div>
-        <div class="flex items-center space-x-2">
-          <span class="material-symbols-outlined text-m3-secondary text-base">check_circle</span>
-          <span>Momentum Over Perfection</span>
+      <!-- Right Column: Interactive Kinetic Loop Breaker Visual -->
+      <div class="lg:col-span-5 w-full">
+        <div class="bg-m3-primary p-6 sm:p-8 rounded-m3-xl border border-m3-outline m3-shadow-3 relative overflow-hidden text-center flex flex-col items-center justify-center min-h-[380px]">
+          
+          <!-- Background Grid Texture -->
+          <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#F4EFE6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+
+          <!-- Kinetic Loop Animation Container -->
+          <div id="loop-visual" class="relative w-48 h-48 my-4 flex items-center justify-center transition-all duration-700">
+            <div class="absolute inset-0 rounded-full border-2 border-dashed border-white/20 animate-spin-slow"></div>
+            <div class="absolute inset-3 rounded-full border border-white/10 animate-spin-reverse"></div>
+            
+            <div id="loop-core" class="relative z-10 w-20 h-20 rounded-2xl bg-white/5 border border-white/20 backdrop-blur-md flex items-center justify-center transition-all duration-500 shadow-lg">
+              <span id="core-icon" class="material-symbols-outlined text-3xl text-white/60 transition-all duration-500">sync</span>
+            </div>
+
+            <div id="bolt-overlay" class="absolute inset-0 z-20 flex items-center justify-center opacity-0 scale-50 transition-all duration-300 pointer-events-none">
+              <span class="material-symbols-outlined text-6xl text-m3-accent drop-shadow-[0_0_15px_rgba(196,52,43,0.8)]">bolt</span>
+            </div>
+          </div>
+
+          <!-- Status text -->
+          <div class="space-y-2 relative z-10">
+            <span id="visual-status" class="text-xs uppercase tracking-widest text-white/50 font-mono transition-colors">State: Analysis Loop Active</span>
+            <p id="visual-subtext" class="text-xs text-white/70 max-w-xs mx-auto">Simulating infinite contingencies & endless preparation.</p>
+          </div>
+
+          <!-- Interactive Trigger Button -->
+          <button onclick="breakTheLoop()" id="break-btn" class="mt-6 relative z-10 px-6 py-3 rounded-m3-full bg-m3-accent hover:opacity-90 text-m3-on-accent text-xs font-bold tracking-wider uppercase transition-all shadow-md cursor-pointer flex items-center space-x-2">
+            <span class="material-symbols-outlined text-sm">flash_on</span>
+            <span>Break the Loop</span>
+          </button>
+
         </div>
       </div>
 
@@ -406,6 +452,57 @@
     function toggleMobileMenu() {
       const menu = document.getElementById('mobile-menu');
       menu.classList.toggle('hidden');
+    }
+
+    let isBroken = false;
+    function breakTheLoop() {
+      const visual = document.getElementById('loop-visual');
+      const core = document.getElementById('loop-core');
+      const icon = document.getElementById('core-icon');
+      const bolt = document.getElementById('bolt-overlay');
+      const status = document.getElementById('visual-status');
+      const subtext = document.getElementById('visual-subtext');
+      const btn = document.getElementById('break-btn');
+
+      if (!isBroken) {
+        isBroken = true;
+        visual.querySelectorAll('.animate-spin-slow, .animate-spin-reverse').forEach(el => {
+          el.style.animationPlayState = 'paused';
+          el.style.opacity = '0.1';
+        });
+
+        core.className = "relative z-10 w-24 h-24 rounded-2xl bg-m3-accent/20 border-2 border-m3-accent backdrop-blur-md flex items-center justify-center transition-all duration-500 shadow-2xl scale-110";
+        icon.className = "material-symbols-outlined text-4xl text-m3-accent";
+        icon.textContent = "bolt";
+
+        bolt.classList.remove('opacity-0', 'scale-50');
+        bolt.classList.add('opacity-100', 'scale-100');
+
+        status.textContent = "State: Forward Momentum Locked";
+        status.className = "text-xs uppercase tracking-widest text-m3-accent font-mono font-bold transition-colors";
+        subtext.textContent = "Loop shattered. Decision executed. Forward gear engaged.";
+        
+        btn.innerHTML = '<span class="material-symbols-outlined text-sm">refresh</span><span>Reset Loop</span>';
+      } else {
+        isBroken = false;
+        visual.querySelectorAll('.animate-spin-slow, .animate-spin-reverse').forEach(el => {
+          el.style.animationPlayState = 'running';
+          el.style.opacity = '1';
+        });
+
+        core.className = "relative z-10 w-20 h-20 rounded-2xl bg-white/5 border border-white/20 backdrop-blur-md flex items-center justify-center transition-all duration-500 shadow-lg";
+        icon.className = "material-symbols-outlined text-3xl text-white/60 transition-all duration-500";
+        icon.textContent = "sync";
+
+        bolt.classList.remove('opacity-100', 'scale-100');
+        bolt.classList.add('opacity-0', 'scale-50');
+
+        status.textContent = "State: Analysis Loop Active";
+        status.className = "text-xs uppercase tracking-widest text-white/50 font-mono transition-colors";
+        subtext.textContent = "Simulating infinite contingencies & endless preparation.";
+
+        btn.innerHTML = '<span class="material-symbols-outlined text-sm">flash_on</span><span>Break the Loop</span>';
+      }
     }
   </script>
 </body>

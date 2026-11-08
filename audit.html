@@ -71,12 +71,12 @@
         <span class="text-xs uppercase tracking-widest text-m3-accent font-bold">Interactive Diagnostic</span>
         <h1 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-m3-on-surface">Where are you over-analyzing?</h1>
         <p class="text-sm sm:text-base text-m3-on-surface-variant max-w-lg mx-auto leading-relaxed">
-          Check any of the friction points below that are currently keeping you stuck. See how much cognitive energy you're burning in preparation.
+          Check any of the friction points below that are currently keeping you stuck, then click submit to calculate your execution score.
         </p>
       </div>
 
       <!-- Audit Form Checklist -->
-      <form id="audit-form" class="space-y-4">
+      <form id="audit-form" class="space-y-4" onsubmit="return false;">
         <label class="flex items-start space-x-3 p-4 rounded-m3-lg bg-m3-surface-variant border border-m3-outline cursor-pointer hover:border-m3-primary transition-all">
           <input type="checkbox" name="bottleneck" value="1" class="mt-1 h-4 w-4 rounded border-m3-outline text-m3-accent focus:ring-m3-accent">
           <span class="text-sm text-m3-on-surface"><strong>1. Waiting for 100% Certainty:</strong> Delaying a choice because you want guarantees that every outcome will go smoothly.</span>
@@ -101,6 +101,13 @@
           <input type="checkbox" name="bottleneck" value="1" class="mt-1 h-4 w-4 rounded border-m3-outline text-m3-accent focus:ring-m3-accent">
           <span class="text-sm text-m3-on-surface"><strong>5. Spinning in Your Head:</strong> Re-running the same scenarios inside your mind over and over without any outside perspective to break the loop.</span>
         </label>
+
+        <!-- Submit Button -->
+        <div class="pt-4 text-center">
+          <button type="button" id="submit-audit" class="w-full sm:w-auto px-8 py-4 rounded-m3-full bg-m3-primary hover:bg-black text-white text-base font-semibold transition-all shadow-md cursor-pointer">
+            Calculate My Results
+          </button>
+        </div>
       </form>
 
       <!-- Results Box (Hidden by Default) -->
@@ -128,33 +135,29 @@
 
   <!-- Calculation Script -->
   <script>
-    const checkboxes = document.querySelectorAll('input[name="bottleneck"]');
+    const submitBtn = document.getElementById('submit-audit');
     const resultsBox = document.getElementById('audit-results');
     const resultTitle = document.getElementById('result-title');
     const resultDescription = document.getElementById('result-description');
 
-    checkboxes.forEach(box => {
-      box.addEventListener('change', () => {
-        const checkedCount = document.querySelectorAll('input[name="bottleneck"]:checked').length;
-        
-        if (checkedCount === 0) {
-          resultsBox.classList.add('hidden');
-          return;
-        }
+    submitBtn.addEventListener('click', () => {
+      const checkedCount = document.querySelectorAll('input[name="bottleneck"]:checked').length;
+      
+      resultsBox.classList.remove('hidden');
 
-        resultsBox.classList.remove('hidden');
+      if (checkedCount <= 1) {
+        resultTitle.textContent = "Score: High Velocity (0–1 Friction Points)";
+        resultDescription.textContent = "Your momentum is steady. You process uncertainty well and translate choices into action without getting bogged down.";
+      } else if (checkedCount <= 3) {
+        resultTitle.textContent = "Score: Caught in the Loop (2–3 Friction Points)";
+        resultDescription.textContent = "You are burning valuable energy on over-thinking. You want to move forward, but unnecessary perfectionism is holding you back.";
+      } else {
+        resultTitle.textContent = "Score: Severe Execution Stall (4–5 Friction Points)";
+        resultDescription.textContent = "You are trapped in an infinite cycle of preparation and planning. You need external structure to break the pattern and start executing.";
+      }
 
-        if (checkedCount <= 1) {
-          resultTitle.textContent = "Score: High Velocity (0–1 Friction Points)";
-          resultDescription.textContent = "Your momentum is steady. You process uncertainty well and translate choices into action without getting bogged down.";
-        } else if (checkedCount <= 3) {
-          resultTitle.textContent = "Score: Caught in the Loop (2–3 Friction Points)";
-          resultDescription.textContent = "You are burning valuable energy on over-thinking. You want to move forward, but unnecessary perfectionism is holding you back.";
-        } else {
-          resultTitle.textContent = "Score: Severe Execution Stall (4–5 Friction Points)";
-          resultDescription.textContent = "You are trapped in an infinite cycle of preparation and planning. You need external structure to break the pattern and start executing.";
-        }
-      });
+      // Smooth scroll down to the results box so the user sees it immediately
+      resultsBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     });
   </script>
 </body>

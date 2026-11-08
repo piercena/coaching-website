@@ -35,7 +35,7 @@
       </a>
     </nav>
 
-    <!-- Mobile menu toggle button (No inline onclick to prevent scope conflict) -->
+    <!-- Mobile menu toggle button -->
     <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg bg-m3-surface-variant text-m3-on-surface cursor-pointer" aria-label="Toggle Navigation Menu">
       <span class="material-symbols-outlined pointer-events-none">menu</span>
     </button>
@@ -74,13 +74,24 @@
 
     if (!btn || !menu) return;
 
-    // Global helper so any legacy inline calls still work safely
-    window.toggleMobileMenu = function(e) {
-      if (e && e.stopPropagation) e.stopPropagation();
-      menu.classList.toggle('hidden');
-    };
-
-    // Single source of truth event listener
+    // Toggle button click handler
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
-      menu.
+      menu.classList.toggle('hidden');
+    });
+
+    // Close menu when clicking ANY link inside the dropdown
+    menu.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.add('hidden');
+      });
+    });
+
+    // Dismiss menu when clicking anywhere else on the page outside the menu and toggle button
+    document.addEventListener('click', (e) => {
+      if (!menu.classList.contains('hidden') && !menu.contains(e.target) && !btn.contains(e.target)) {
+        menu.classList.add('hidden');
+      }
+    });
+  })();
+</script>

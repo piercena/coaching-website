@@ -92,7 +92,7 @@
   <!-- Navigation Header (Fixed Global) -->
   <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#F4EFE6]/90 border-b border-m3-outline/40 py-4 px-6 sm:px-12 transition-all">
     <div class="max-w-7xl mx-auto w-full flex items-center justify-between">
-      <a href="#" class="flex items-center space-x-3 group">
+      <a href="index.html" class="flex items-center space-x-3 group">
         <div class="w-10 h-10 rounded-m3-lg bg-m3-primary flex items-center justify-center font-bold text-lg shadow-sm text-white">
           NP
         </div>
@@ -107,6 +107,7 @@
         <a href="#philosophy" class="text-m3-on-surface-variant hover:text-m3-primary transition-colors">Philosophy</a>
         <a href="#method" class="text-m3-on-surface-variant hover:text-m3-primary transition-colors">The Method</a>
         <a href="#daily-insights" class="text-m3-on-surface-variant hover:text-m3-primary transition-colors">Daily Insights</a>
+        <a href="about.html" class="text-m3-on-surface-variant hover:text-m3-primary transition-colors">About</a>
         <a href="https://cal.com/nicholas-pierce-mcbbsl/30min" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-m3-full bg-m3-primary text-sm font-semibold transition-transform hover:scale-[1.02] active:scale-95 shadow-sm text-white cursor-pointer inline-flex items-center justify-center">
           Book a Call
         </a>
@@ -125,6 +126,7 @@
       <a href="#philosophy" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant">Philosophy</a>
       <a href="#method" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant">The Method</a>
       <a href="#daily-insights" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant">Daily Insights</a>
+      <a href="about.html" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant">About</a>
       <a href="https://cal.com/nicholas-pierce-mcbbsl/30min" target="_blank" rel="noopener noreferrer" class="w-full text-center py-3 rounded-m3-full bg-m3-primary font-semibold text-white block">
         Book a Call
       </a>
@@ -159,7 +161,8 @@
               <span>Schedule 1:1 Conversation</span>
               <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
             </a>
-            <a href="#daily-insights" class="px-8 py-4 rounded-m3-full border-2 border-m3-primary text-m3-primary hover:bg-m3-surface-variant text-base font-semibold transition-colors flex items-center justify-center space-x-2">
+            <!-- Sharpened Outline Button -->
+            <a href="#daily-insights" class="px-8 py-4 rounded-m3-full border-2 border-m3-primary/80 hover:border-m3-primary text-m3-primary hover:bg-m3-surface-variant/60 text-base font-semibold transition-all flex items-center justify-center space-x-2 shadow-sm">
               <span>Receive Daily Reflections</span>
               <span class="material-symbols-outlined text-lg">mail</span>
             </a>
@@ -169,11 +172,11 @@
           <div class="pt-6 border-t border-m3-outline flex flex-wrap items-center gap-6 text-xs text-m3-on-surface-variant font-medium">
             <div class="flex items-center space-x-2">
               <span class="material-symbols-outlined text-m3-secondary text-base">check_circle</span>
-              <span>Grounded Executive Coaching</span>
+              <span>No 'BS' Leadership Coaching</span>
             </div>
             <div class="flex items-center space-x-2">
               <span class="material-symbols-outlined text-m3-secondary text-base">check_circle</span>
-              <span>Actionable Present Clarity</span>
+              <span>Momentum Over Perfection</span>
             </div>
           </div>
         </div>
@@ -184,19 +187,15 @@
             <div class="absolute top-0 right-0 w-32 h-32 bg-m3-secondary-container rounded-full blur-2xl opacity-50 -mr-10 -mt-10"></div>
             
             <div class="relative z-10 space-y-6">
-              <div class="w-12 h-12 rounded-2xl bg-m3-primary-container flex items-center justify-center text-white">
-                <span class="material-symbols-outlined text-2xl text-m3-accent">compass_calibration</span>
-              </div>
-              
-              <h2 class="text-2xl font-bold text-m3-on-surface">The Forward Stance</h2>
+              <h2 class="text-2xl font-bold text-m3-on-surface">The Forward Gear</h2>
               
               <blockquote class="text-m3-on-surface-variant font-serif italic text-base leading-relaxed border-l-2 border-m3-accent pl-4">
-                "We don't need absolute certainty to take our next step — only courage and a forward direction."
+                "We don't need absolute certainty to take our next step — only courage and a direction."
               </blockquote>
 
               <div class="pt-4 flex items-center space-x-4">
-                <div class="w-12 h-12 rounded-full bg-m3-surface-variant border border-m3-outline flex items-center justify-center font-bold text-m3-primary">
-                  NP
+                <div class="w-12 h-12 rounded-full overflow-hidden border border-m3-outline shrink-0 shadow-inner">
+                  <img src="profile-ski.jpeg" alt="Nick Pierce" class="w-full h-full object-cover object-center">
                 </div>
                 <div>
                   <div class="font-bold text-sm text-m3-on-surface">Nick Pierce</div>
@@ -355,9 +354,9 @@
       </div>
 
       <div class="flex space-x-6 text-xs text-m3-on-primary-container opacity-80">
+        <a href="about.html" class="hover:underline">About</a>
         <a href="#" class="hover:underline">Privacy Policy</a>
         <a href="#" class="hover:underline">Terms of Coaching</a>
-        <a href="#" class="hover:underline">Contact</a>
       </div>
     </div>
   </footer>

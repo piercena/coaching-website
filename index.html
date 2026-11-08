@@ -18,18 +18,11 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Google Fonts: Plus Jakarta Sans for refined M3 typography -->
+  <!-- Google Fonts & Material Symbols -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Material Symbols Outlined -->
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-
-  <!-- Google Fonts: Plus Jakarta Sans & Newsreader for elegant contrast -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
@@ -63,8 +56,6 @@
       --color-accent: #C4342B;
       --color-on-accent: #F4EFE6;
       --color-secondary: #3E7C74;
-      --color-secondary-container: #E2E8F0;
-      --color-on-secondary-container: #1C403B;
       --color-outline: #D0C6B5;
     }
 
@@ -74,17 +65,12 @@
       font-family: 'Plus Jakarta Sans', sans-serif;
     }
 
-    .font-serif {
-      font-family: 'Newsreader', Georgia, serif;
-    }
+    .font-serif { font-family: 'Newsreader', Georgia, serif; }
 
     .bg-m3-surface { background-color: var(--color-surface); }
     .bg-m3-surface-variant { background-color: var(--color-surface-variant); }
     .bg-m3-primary { background-color: var(--color-primary); color: var(--color-on-primary); }
-    .bg-m3-primary-container { background-color: var(--color-primary-container); color: var(--color-on-primary-container); }
     .bg-m3-accent { background-color: var(--color-accent); color: var(--color-on-accent); }
-    .bg-m3-secondary-container { background-color: var(--color-secondary-container); color: var(--color-on-secondary-container); }
-    
     .text-m3-primary { color: var(--color-primary); }
     .text-m3-on-surface { color: var(--color-on-surface); }
     .text-m3-on-surface-variant { color: var(--color-on-surface-variant); }
@@ -96,16 +82,22 @@
     .m3-shadow-2 { box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.06), 0px 2px 8px rgba(0, 0, 0, 0.03); }
     .m3-shadow-3 { box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.08), 0px 4px 16px rgba(0, 0, 0, 0.04); }
 
-    @keyframes spin-slow {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+    /* Organic Orbit & Wave Animations */
+    @keyframes orbit-path {
+      0% { transform: rotate(0deg) translateX(55px) rotate(0deg); }
+      100% { transform: rotate(360deg) translateX(55px) rotate(-360deg); }
     }
-    @keyframes spin-reverse {
-      0% { transform: rotate(360deg); }
-      100% { transform: rotate(0deg); }
+    @keyframes orbit-path-reverse {
+      0% { transform: rotate(360deg) translateX(40px) rotate(-360deg); }
+      100% { transform: rotate(0deg) translateX(40px) rotate(0deg); }
     }
-    .animate-spin-slow { animation: spin-slow 12s linear infinite; }
-    .animate-spin-reverse { animation: spin-reverse 15s linear infinite; }
+    @keyframes pulse-subtle {
+      0%, 100% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.05); opacity: 1; }
+    }
+    .animate-orbit { animation: orbit-path 16s linear infinite; }
+    .animate-orbit-rev { animation: orbit-path-reverse 12s linear infinite; }
+    .animate-pulse-subtle { animation: pulse-subtle 4s ease-in-out infinite; }
   </style>
 </head>
 <body class="h-full flex flex-col font-sans pt-24" id="app-root">
@@ -114,11 +106,9 @@
   <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#F4EFE6]/90 border-b border-m3-outline/40 py-4 px-6 sm:px-12 transition-all">
     <div class="max-w-7xl mx-auto w-full flex items-center justify-between">
       <a href="/" class="flex items-center space-x-3 group">
-        <!-- Top-Left Logo Image -->
         <div class="w-10 h-10 rounded-lg overflow-hidden flex items-center justify-center shrink-0">
           <img src="logo.png" alt="Logo" class="w-full h-full object-contain">
         </div>
-        
         <div class="flex flex-col">
           <span class="font-bold text-base text-m3-on-surface leading-none group-hover:text-m3-accent transition-colors">Nick Pierce</span>
         </div>
@@ -135,9 +125,11 @@
             <span>Offerings</span>
             <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
           </button>
-          <div class="absolute left-0 mt-1 w-44 bg-m3-surface border border-m3-outline rounded-m3-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2 z-50">
-            <a href="/#offer" class="block px-4 py-2 text-sm text-m3-on-surface-variant hover:bg-m3-surface-variant hover:text-m3-primary transition-colors">Momentum Coaching</a>
-            <a href="audit.html" class="block px-4 py-2 text-sm text-m3-on-surface-variant hover:bg-m3-surface-variant hover:text-m3-primary transition-colors">Self Assessment</a>
+          <div class="absolute left-0 mt-1 w-52 bg-m3-surface border border-m3-outline rounded-m3-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2 z-50">
+            <a href="/#offer" class="block px-4 py-2 text-sm text-m3-on-surface-variant hover:bg-m3-surface-variant hover:text-m3-primary transition-colors">Momentum</a>
+            <a href="audit.html" class="block px-4 py-2 text-sm text-m3-on-surface-variant hover:bg-m3-surface-variant hover:text-m3-primary transition-colors">Analysis Audit</a>
+            <a href="protocol.html" class="block px-4 py-2 text-sm text-m3-on-surface-variant hover:bg-m3-surface-variant hover:text-m3-primary transition-colors">Decision Protocol</a>
+            <a href="unstucker.html" class="block px-4 py-2 text-sm text-m3-on-surface-variant hover:bg-m3-surface-variant hover:text-m3-primary transition-colors">Emergency Unstucker</a>
           </div>
         </div>
 
@@ -160,14 +152,13 @@
     <div class="flex flex-col space-y-4 font-medium text-sm">
       <a href="/#philosophy" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant">Philosophy</a>
       <a href="/#method" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant">The Method</a>
-      
-      <!-- Mobile Offerings Sub-list -->
       <div class="pl-4 border-l-2 border-m3-outline flex flex-col space-y-3 py-1">
         <span class="text-xs uppercase tracking-widest text-m3-accent font-bold">Offerings</span>
         <a href="/#offer" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant">Momentum</a>
-        <a href="audit.html" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant">Audit</a>
+        <a href="audit.html" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant">Analysis Audit</a>
+        <a href="protocol.html" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant">Decision Protocol</a>
+        <a href="unstucker.html" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant">Emergency Unstucker</a>
       </div>
-
       <a href="/#newsletter" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant">Newsletter</a>
       <a href="about.html" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant">About</a>
       <a href="https://cal.com/nicholas-pierce-mcbbsl/30min" target="_blank" rel="noopener noreferrer" class="w-full text-center py-3 rounded-m3-full bg-m3-primary font-semibold text-white block">
@@ -178,7 +169,7 @@
 
   <main class="flex-grow">
     
-    <!-- HERO SECTION (SPLIT LAYOUT WITH KINETIC LOOP BREAKER) -->
+    <!-- HERO SECTION WITH ORGANIC FLUID LOOP GRAPHIC -->
     <section id="philosophy" class="py-16 sm:py-24 px-6 sm:px-12 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
       
       <!-- Left Column: Headline & CTAs -->
@@ -205,7 +196,7 @@
           </a>
         </div>
 
-        <div class="pt-6 border-t border-m3-outline/60 flex flex-wrap items-center justify-center lg:justify-start gap-6 sm:gap-10 text-xs text-m3-on-surface-variant font-medium">
+        <div class="pt-4 border-t border-m3-outline/60 flex flex-wrap items-center justify-center lg:justify-start gap-6 sm:gap-10 text-xs text-m3-on-surface-variant font-medium">
           <div class="flex items-center space-x-2">
             <span class="material-symbols-outlined text-m3-secondary text-base">check_circle</span>
             <span>No 'BS' Leadership Coaching</span>
@@ -217,38 +208,46 @@
         </div>
       </div>
 
-      <!-- Right Column: Interactive Kinetic Loop Breaker Visual -->
-      <div class="lg:col-span-5 w-full">
-        <div class="bg-m3-primary p-6 sm:p-8 rounded-m3-xl border border-m3-outline m3-shadow-3 relative overflow-hidden text-center flex flex-col items-center justify-center min-h-[380px]">
+      <!-- Right Column: Standalone Organic Fluid Loop Graphic -->
+      <div class="lg:col-span-5 w-full flex justify-center">
+        <div class="w-full max-w-[420px] bg-m3-primary p-8 rounded-m3-xl border border-m3-outline m3-shadow-3 relative overflow-hidden flex flex-col items-center justify-center min-h-[400px]">
           
-          <!-- Background Grid Texture -->
+          <!-- Subtle Background Texture -->
           <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#F4EFE6_1px,transparent_1px)] [background-size:16px_16px]"></div>
 
-          <!-- Kinetic Loop Animation Container -->
-          <div id="loop-visual" class="relative w-48 h-48 my-4 flex items-center justify-center transition-all duration-700">
-            <div class="absolute inset-0 rounded-full border-2 border-dashed border-white/20 animate-spin-slow"></div>
-            <div class="absolute inset-3 rounded-full border border-white/10 animate-spin-reverse"></div>
+          <!-- Organic Fluid / Orbit Graphic Container -->
+          <div class="relative w-64 h-64 flex items-center justify-center my-4">
             
-            <div id="loop-core" class="relative z-10 w-20 h-20 rounded-2xl bg-white/5 border border-white/20 backdrop-blur-md flex items-center justify-center transition-all duration-500 shadow-lg">
-              <span id="core-icon" class="material-symbols-outlined text-3xl text-white/60 transition-all duration-500">sync</span>
+            <!-- Outer Fluid Ellipse Path (Simulating mental orbit) -->
+            <div class="absolute w-56 h-36 rounded-[100px] border border-white/15 animate-spin-slow rotate-12"></div>
+            
+            <!-- Secondary Ellipse Path -->
+            <div class="absolute w-44 h-48 rounded-[120px] border border-dashed border-white/10 animate-spin-reverse -rotate-45"></div>
+
+            <!-- Orbiting Nodes (Representing thoughts/contingencies) -->
+            <div class="absolute inset-0 flex items-center justify-center animate-orbit">
+              <div class="w-3 h-3 rounded-full bg-[#E2E8F0]/40 blur-[0.5px]"></div>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center animate-orbit-rev">
+              <div class="w-2.5 h-2.5 rounded-full bg-m3-accent shadow-[0_0_10px_#C4342B]"></div>
             </div>
 
-            <div id="bolt-overlay" class="absolute inset-0 z-20 flex items-center justify-center opacity-0 scale-50 transition-all duration-300 pointer-events-none">
-              <span class="material-symbols-outlined text-6xl text-m3-accent drop-shadow-[0_0_15px_rgba(196,52,43,0.8)]">bolt</span>
+            <!-- Central Core Node -->
+            <div class="relative z-10 w-20 h-20 rounded-full bg-white/5 border border-white/20 backdrop-blur-md flex items-center justify-center shadow-2xl animate-pulse-subtle">
+              <span class="material-symbols-outlined text-3xl text-white/80">psychology</span>
             </div>
+
+            <!-- Accent Flow Line -->
+            <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-40" viewBox="0 0 200 200">
+              <path d="M 30,100 Q 100,20 170,100 T 30,100" fill="none" stroke="#C4342B" stroke-width="1.5" stroke-dasharray="4 4" />
+            </svg>
           </div>
 
-          <!-- Status text -->
-          <div class="space-y-2 relative z-10">
-            <span id="visual-status" class="text-xs uppercase tracking-widest text-white/50 font-mono transition-colors">State: Analysis Loop Active</span>
-            <p id="visual-subtext" class="text-xs text-white/70 max-w-xs mx-auto">Simulating infinite contingencies & endless preparation.</p>
+          <!-- Human-Tone Prose Footer -->
+          <div class="text-center relative z-10 space-y-1 mt-2">
+            <p class="text-sm font-serif italic text-[#F4EFE6]/90">"You aren't stuck because you lack a plan."</p>
+            <p class="text-xs text-[#E2E8F0]/50">You're stuck because your mind can see around every corner.</p>
           </div>
-
-          <!-- Interactive Trigger Button -->
-          <button onclick="breakTheLoop()" id="break-btn" class="mt-6 relative z-10 px-6 py-3 rounded-m3-full bg-m3-accent hover:opacity-90 text-m3-on-accent text-xs font-bold tracking-wider uppercase transition-all shadow-md cursor-pointer flex items-center space-x-2">
-            <span class="material-symbols-outlined text-sm">flash_on</span>
-            <span>Break the Loop</span>
-          </button>
 
         </div>
       </div>
@@ -452,57 +451,6 @@
     function toggleMobileMenu() {
       const menu = document.getElementById('mobile-menu');
       menu.classList.toggle('hidden');
-    }
-
-    let isBroken = false;
-    function breakTheLoop() {
-      const visual = document.getElementById('loop-visual');
-      const core = document.getElementById('loop-core');
-      const icon = document.getElementById('core-icon');
-      const bolt = document.getElementById('bolt-overlay');
-      const status = document.getElementById('visual-status');
-      const subtext = document.getElementById('visual-subtext');
-      const btn = document.getElementById('break-btn');
-
-      if (!isBroken) {
-        isBroken = true;
-        visual.querySelectorAll('.animate-spin-slow, .animate-spin-reverse').forEach(el => {
-          el.style.animationPlayState = 'paused';
-          el.style.opacity = '0.1';
-        });
-
-        core.className = "relative z-10 w-24 h-24 rounded-2xl bg-m3-accent/20 border-2 border-m3-accent backdrop-blur-md flex items-center justify-center transition-all duration-500 shadow-2xl scale-110";
-        icon.className = "material-symbols-outlined text-4xl text-m3-accent";
-        icon.textContent = "bolt";
-
-        bolt.classList.remove('opacity-0', 'scale-50');
-        bolt.classList.add('opacity-100', 'scale-100');
-
-        status.textContent = "State: Forward Momentum Locked";
-        status.className = "text-xs uppercase tracking-widest text-m3-accent font-mono font-bold transition-colors";
-        subtext.textContent = "Loop shattered. Decision executed. Forward gear engaged.";
-        
-        btn.innerHTML = '<span class="material-symbols-outlined text-sm">refresh</span><span>Reset Loop</span>';
-      } else {
-        isBroken = false;
-        visual.querySelectorAll('.animate-spin-slow, .animate-spin-reverse').forEach(el => {
-          el.style.animationPlayState = 'running';
-          el.style.opacity = '1';
-        });
-
-        core.className = "relative z-10 w-20 h-20 rounded-2xl bg-white/5 border border-white/20 backdrop-blur-md flex items-center justify-center transition-all duration-500 shadow-lg";
-        icon.className = "material-symbols-outlined text-3xl text-white/60 transition-all duration-500";
-        icon.textContent = "sync";
-
-        bolt.classList.remove('opacity-100', 'scale-100');
-        bolt.classList.add('opacity-0', 'scale-50');
-
-        status.textContent = "State: Analysis Loop Active";
-        status.className = "text-xs uppercase tracking-widest text-white/50 font-mono transition-colors";
-        subtext.textContent = "Simulating infinite contingencies & endless preparation.";
-
-        btn.innerHTML = '<span class="material-symbols-outlined text-sm">flash_on</span><span>Break the Loop</span>';
-      }
     }
   </script>
 </body>

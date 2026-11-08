@@ -40,34 +40,21 @@
   </script>
 
   <style>
-    /* ==========================================
-        MATERIAL 3 COLOR SYSTEM (MODULAR PALETTE)
-        To swap color palettes in the future, simply edit 
-        the HEX values in this :root block.
-        ========================================== */
     :root {
-      /* Primary Brand Tones */
-      --color-primary: #12181D;             /* Slate Charcoal */
+      --color-primary: #12181D;
       --color-on-primary: #FFFFFF;
       --color-primary-container: #2A363F;
       --color-on-primary-container: #E2E8F0;
-      
-      /* Surface & Background Tones */
-      --color-background: #F4EFE6;           /* Warm Cream / Linen */
-      --color-surface: #FCFAF7;              /* Soft White Surface */
-      --color-surface-variant: #EAE3D5;      /* Subtle Linen Neutral */
-      
+      --color-background: #F4EFE6;
+      --color-surface: #FCFAF7;
+      --color-surface-variant: #EAE3D5;
       --color-on-surface: #1C2024;
       --color-on-surface-variant: #454E56;
-      
-      /* Accents & Highlights */
-    --color-accent: #C4342B;                /* Crimson Terracotta Accent */
-    --color-on-accent: #F4EFE6;             /* Warm Linen High Contrast Text */
-    
-    --color-secondary: #3E7C74;             /* Deep Sage / Teal */
+      --color-accent: #C4342B;
+      --color-on-accent: #F4EFE6;
+      --color-secondary: #3E7C74;
       --color-secondary-container: #E2EFEF;
       --color-on-secondary-container: #1C403B;
-
       --color-outline: #D0C6B5;
     }
 
@@ -93,18 +80,11 @@
     .text-m3-on-surface-variant { color: var(--color-on-surface-variant); }
     .text-m3-accent { color: var(--color-accent); }
     .text-m3-secondary { color: var(--color-secondary); }
-
     .border-m3-outline { border-color: var(--color-outline); }
 
-    .m3-shadow-1 {
-      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 4px 12px rgba(0, 0, 0, 0.02);
-    }
-    .m3-shadow-2 {
-      box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.06), 0px 2px 8px rgba(0, 0, 0, 0.03);
-    }
-    .m3-shadow-3 {
-      box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.08), 0px 4px 16px rgba(0, 0, 0, 0.04);
-    }
+    .m3-shadow-1 { box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 4px 12px rgba(0, 0, 0, 0.02); }
+    .m3-shadow-2 { box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.06), 0px 2px 8px rgba(0, 0, 0, 0.03); }
+    .m3-shadow-3 { box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.08), 0px 4px 16px rgba(0, 0, 0, 0.04); }
   </style>
 
   <!-- Cal.com Embed Script -->
@@ -119,7 +99,7 @@
   <!-- Navigation Header -->
   <header class="py-6 px-6 sm:px-12 max-w-7xl mx-auto w-full flex items-center justify-between">
     <a href="#" class="flex items-center space-x-3 group">
-      <div class="w-10 h-10 rounded-m3-lg bg-m3-primary flex items-center justify-center font-bold text-lg shadow-sm">
+      <div class="w-10 h-10 rounded-m3-lg bg-m3-primary flex items-center justify-center font-bold text-lg shadow-sm text-white">
         NP
       </div>
       <div class="flex flex-col">
@@ -178,7 +158,7 @@
             Being stuck isn’t a dead end. It's a wake-up call! But the most dangerous place to be is wondering why the magic of life is gone and why it isn't coming back.
           </p>
 
-          <!-- CTAs -->
+          <!-- CTAs (Corrected to prioritize Booking over Newsletter in Hero) -->
           <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
             <button data-cal-link="nicholas-pierce-mcbbsl/30min" data-cal-config='{"layout":"month_view"}' class="px-8 py-4 rounded-m3-full bg-m3-accent hover:opacity-90 text-m3-on-accent text-base font-semibold transition-all shadow-md flex items-center justify-center space-x-3 group cursor-pointer">
               <span>Schedule 1:1 Conversation</span>
@@ -209,7 +189,7 @@
             <div class="absolute top-0 right-0 w-32 h-32 bg-m3-secondary-container rounded-full blur-2xl opacity-50 -mr-10 -mt-10"></div>
             
             <div class="relative z-10 space-y-6">
-              <div class="w-12 h-12 rounded-2xl bg-m3-primary-container flex items-center justify-center">
+              <div class="w-12 h-12 rounded-2xl bg-m3-primary-container flex items-center justify-center text-white">
                 <span class="material-symbols-outlined text-2xl text-m3-accent">compass_calibration</span>
               </div>
               
@@ -237,7 +217,6 @@
     <!-- THE 3 PILLARS SECTION -->
     <section id="method" class="py-16 sm:py-24 px-6 sm:px-12 bg-m3-surface border-y border-m3-outline">
       <div class="max-w-7xl mx-auto space-y-12">
-        
         <div class="max-w-3xl space-y-4">
           <h2 class="text-xs uppercase tracking-widest text-m3-secondary font-bold">The Core Method</h2>
           <h3 class="text-3xl sm:text-4xl font-bold tracking-tight text-m3-on-surface">Break the Loop of Over-Analysis. Choose Forward.</h3>
@@ -249,20 +228,13 @@
           </p>
         </div>
 
-        <!-- 3 Cards Layout -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
-          <!-- Pillar 1 -->
           <div class="bg-m3-surface-variant p-8 rounded-m3-xl border border-m3-outline flex flex-col justify-between space-y-6 hover:m3-shadow-2 transition-all duration-300">
             <div class="space-y-4">
               <span class="text-xs font-bold uppercase tracking-widest text-m3-accent px-3 py-1 rounded-full bg-m3-surface inline-block">01</span>
               <h4 class="text-2xl font-bold text-m3-on-surface">From Paralysis to Clarity</h4>
-              <p class="text-m3-on-surface-variant text-sm leading-relaxed">
-                <strong class="text-m3-on-surface block mb-1">The Obstacle:</strong> Waiting for the perfect plan before taking the first step.
-              </p>
-              <p class="text-m3-on-surface-variant text-sm leading-relaxed">
-                <strong class="text-m3-on-surface block mb-1">The Pivot:</strong> Shifting from over-thinking to immediate, present-moment decision-making.
-              </p>
+              <p class="text-m3-on-surface-variant text-sm leading-relaxed"><strong class="text-m3-on-surface block mb-1">The Obstacle:</strong> Waiting for the perfect plan before taking the first step.</p>
+              <p class="text-m3-on-surface-variant text-sm leading-relaxed"><strong class="text-m3-on-surface block mb-1">The Pivot:</strong> Shifting from over-thinking to immediate, present-moment decision-making.</p>
             </div>
             <div class="flex items-center text-xs font-semibold text-m3-primary space-x-2 pt-4 border-t border-m3-outline/40">
               <span class="material-symbols-outlined text-sm">auto_stories</span>
@@ -270,17 +242,12 @@
             </div>
           </div>
 
-          <!-- Pillar 2 -->
           <div class="bg-m3-surface-variant p-8 rounded-m3-xl border border-m3-outline flex flex-col justify-between space-y-6 hover:m3-shadow-2 transition-all duration-300">
             <div class="space-y-4">
               <span class="text-xs font-bold uppercase tracking-widest text-m3-accent px-3 py-1 rounded-full bg-m3-surface inline-block">02</span>
               <h4 class="text-2xl font-bold text-m3-on-surface">From Reflection to Action</h4>
-              <p class="text-m3-on-surface-variant text-sm leading-relaxed">
-                <strong class="text-m3-on-surface block mb-1">The Obstacle:</strong> Replaying past outcomes hoping for different insights.
-              </p>
-              <p class="text-m3-on-surface-variant text-sm leading-relaxed">
-                <strong class="text-m3-on-surface block mb-1">The Pivot:</strong> Harvesting the lesson once, closing the loop, and directing energy into what happens next.
-              </p>
+              <p class="text-m3-on-surface-variant text-sm leading-relaxed"><strong class="text-m3-on-surface block mb-1">The Obstacle:</strong> Replaying past outcomes hoping for different insights.</p>
+              <p class="text-m3-on-surface-variant text-sm leading-relaxed"><strong class="text-m3-on-surface block mb-1">The Pivot:</strong> Harvesting the lesson once, closing the loop, and directing energy into what happens next.</p>
             </div>
             <div class="flex items-center text-xs font-semibold text-m3-primary space-x-2 pt-4 border-t border-m3-outline/40">
               <span class="material-symbols-outlined text-sm">filter_center_focus</span>
@@ -288,24 +255,18 @@
             </div>
           </div>
 
-          <!-- Pillar 3 -->
           <div class="bg-m3-surface-variant p-8 rounded-m3-xl border border-m3-outline flex flex-col justify-between space-y-6 hover:m3-shadow-2 transition-all duration-300">
             <div class="space-y-4">
               <span class="text-xs font-bold uppercase tracking-widest text-m3-accent px-3 py-1 rounded-full bg-m3-surface inline-block">03</span>
               <h4 class="text-2xl font-bold text-m3-on-surface">From Intent to Momentum</h4>
-              <p class="text-m3-on-surface-variant text-sm leading-relaxed">
-                <strong class="text-m3-on-surface block mb-1">The Obstacle:</strong> Confusing preparation with actual progress.
-              </p>
-              <p class="text-m3-on-surface-variant text-sm leading-relaxed">
-                <strong class="text-m3-on-surface block mb-1">The Pivot:</strong> Committing to a consistent, unshakeable forward pace—one meaningful action at a time.
-              </p>
+              <p class="text-m3-on-surface-variant text-sm leading-relaxed"><strong class="text-m3-on-surface block mb-1">The Obstacle:</strong> Confusing preparation with actual progress.</p>
+              <p class="text-m3-on-surface-variant text-sm leading-relaxed"><strong class="text-m3-on-surface block mb-1">The Pivot:</strong> Committing to a consistent, unshakeable forward pace—one meaningful action at a time.</p>
             </div>
             <div class="flex items-center text-xs font-semibold text-m3-primary space-x-2 pt-4 border-t border-m3-outline/40">
               <span class="material-symbols-outlined text-sm">trending_up</span>
               <span>Single-Step Momentum</span>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -320,51 +281,31 @@
           </div>
 
           <div class="mb-10 space-y-4 max-w-xl">
-          <!-- Anchor Line -->
-          <p class="text-xs sm:text-sm font-bold uppercase tracking-widest text-[#C4342B]">
-            Daily Notes On —
-          </p>
-        
-          <!-- Striking Concept Trio -->
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-            <!-- Purpose -->
-            <div class="group relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 p-5 backdrop-blur-sm transition-all duration-300 hover:border-[#C4342B]/40 hover:bg-white/[0.08]">
-              <div class="text-xs font-mono text-white/40 mb-1">01</div>
-              <h3 class="text-2xl sm:text-3xl font-black tracking-tight text-[#F4EFE6] group-hover:text-[#C4342B] transition-colors">
-                Purpose
-              </h3>
+            <p class="text-xs sm:text-sm font-bold uppercase tracking-widest text-[#C4342B]">
+              Daily Notes On —
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+              <div class="group relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 p-5 backdrop-blur-sm transition-all duration-300 hover:border-[#C4342B]/40 hover:bg-white/[0.08]">
+                <div class="text-xs font-mono text-white/40 mb-1">01</div>
+                <h3 class="text-2xl sm:text-3xl font-black tracking-tight text-[#F4EFE6] group-hover:text-[#C4342B] transition-colors">Purpose</h3>
+              </div>
+              <div class="group relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 p-5 backdrop-blur-sm transition-all duration-300 hover:border-[#3E7C74]/40 hover:bg-white/[0.08]">
+                <div class="text-xs font-mono text-white/40 mb-1">02</div>
+                <h3 class="text-2xl sm:text-3xl font-black tracking-tight text-[#F4EFE6] group-hover:text-[#3E7C74] transition-colors">Clarity</h3>
+              </div>
+              <div class="group relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 p-5 backdrop-blur-sm transition-all duration-300 hover:border-[#D9A441]/40 hover:bg-white/[0.08]">
+                <div class="text-xs font-mono text-white/40 mb-1">03</div>
+                <h3 class="text-2xl sm:text-3xl font-black tracking-tight text-[#F4EFE6] group-hover:text-[#D9A441] transition-colors">Choices</h3>
+              </div>
             </div>
-        
-            <!-- Clarity -->
-            <div class="group relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 p-5 backdrop-blur-sm transition-all duration-300 hover:border-[#3E7C74]/40 hover:bg-white/[0.08]">
-              <div class="text-xs font-mono text-white/40 mb-1">02</div>
-              <h3 class="text-2xl sm:text-3xl font-black tracking-tight text-[#F4EFE6] group-hover:text-[#3E7C74] transition-colors">
-                Clarity
-              </h3>
-            </div>
-        
-            <!-- Choices -->
-            <div class="group relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 p-5 backdrop-blur-sm transition-all duration-300 hover:border-[#D9A441]/40 hover:bg-white/[0.08]">
-              <div class="text-xs font-mono text-white/40 mb-1">03</div>
-              <h3 class="text-2xl sm:text-3xl font-black tracking-tight text-[#F4EFE6] group-hover:text-[#D9A441] transition-colors">
-                Choices
-              </h3>
-            </div>
-          </div>
           </div>
 
           <p class="text-m3-on-primary-container text-base sm:text-lg opacity-90 max-w-xl">
             Messages delivered straight to your inbox. One short perspective shift to help you stay clear-headed and intentional throughout the day.
           </p>
 
-          <!-- Email Form -->
+          <!-- Email Form (Kit) -->
           <script async data-uid="3db8ed1a20" src="https://nick-pierce.kit.com/3db8ed1a20/index.js"></script>
-
-          <!-- Success Notification -->
-          <div id="form-success" class="hidden p-4 rounded-m3-lg bg-emerald-900/80 text-emerald-200 text-sm flex items-center space-x-3">
-            <span class="material-symbols-outlined text-emerald-400">check_circle</span>
-            <span>Thank you for joining. Keep an eye on your inbox for your first reflection.</span>
-          </div>
 
           <div class="flex items-center space-x-2 text-xs opacity-60 pt-2">
             <span class="material-symbols-outlined text-xs">lock</span>
@@ -383,7 +324,6 @@
           Reserve a 30-minute call to discuss where you are stuck and if coaching is right for you.
         </p>
 
-        <!-- Cal.com Live Trigger Card -->
         <div class="pt-6">
           <div class="bg-m3-surface-variant p-8 rounded-m3-xl border border-m3-outline max-w-2xl mx-auto text-left space-y-6 m3-shadow-1">
             <div class="flex items-center justify-between border-b border-m3-outline pb-4">
@@ -433,12 +373,10 @@
 
   <!-- JAVASCRIPT LOGIC -->
   <script>
-    // Mobile Menu Toggle
     function toggleMobileMenu() {
       const menu = document.getElementById('mobile-menu');
       menu.classList.toggle('hidden');
     }
   </script>
-
 </body>
 </html>

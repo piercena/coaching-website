@@ -3,8 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Analysis Paralysis Audit</title>
+  <title>The Analysis Paralysis Audit | Nick Pierce</title>
   
+  <!-- Favicon Meta Tags -->
+  <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
+
   <!-- Google Fonts & Material Symbols -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,22 +47,33 @@
     }
   </script>
   <style>
-    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F4EFE6; color: #1C2024; }
+    :root {
+      --color-background: #F4EFE6;
+      --color-on-surface: #1C2024;
+      --color-outline: #D0C6B5;
+    }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--color-background); color: var(--color-on-surface); }
   </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between selection:bg-m3-accent selection:text-white pt-24">
 
-  <!-- TOP NAVIGATION BAR -->
+  <!-- TOP NAVIGATION BAR (Matching index.html) -->
   <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#F4EFE6]/90 border-b border-m3-outline/40 py-4 px-6 sm:px-12 transition-all">
-    <div class="max-w-5xl mx-auto w-full flex items-center justify-between">
-      <a href="index.html" class="font-bold text-base text-m3-on-surface flex items-center space-x-2">
-        <span class="material-symbols-outlined text-m3-accent">bolt</span>
-        <span>Nick Pierce</span>
+    <div class="max-w-7xl mx-auto w-full flex items-center justify-between">
+      <a href="index.html" class="flex items-center space-x-3 group">
+        <div class="w-10 h-10 rounded-lg overflow-hidden flex items-center justify-center shrink-0">
+          <img src="logo.png" alt="Logo" class="w-full h-full object-contain">
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold text-base text-m3-on-surface leading-none group-hover:text-m3-accent transition-colors">Nick Pierce</span>
+        </div>
       </a>
-      <nav class="flex items-center space-x-6 text-sm font-medium">
-        <a href="index.html#method" class="text-m3-on-surface-variant hover:text-m3-primary transition-colors">Framework</a>
-        <a href="index.html#offer" class="text-m3-on-surface-variant hover:text-m3-primary transition-colors">Momentum</a>
-        <a href="https://cal.com/nicholas-pierce-mcbbsl/30min" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-m3-full bg-m3-accent text-m3-on-accent text-sm font-semibold hover:opacity-90 transition-all shadow-md">Clarity Call</a>
+
+      <!-- Booking CTA Button -->
+      <nav class="flex items-center">
+        <a href="https://cal.com/nicholas-pierce-mcbbsl/30min" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-m3-full bg-m3-primary text-sm font-semibold transition-transform hover:scale-[1.02] active:scale-95 shadow-sm text-white cursor-pointer inline-flex items-center justify-center">
+          Book a Call
+        </a>
       </nav>
     </div>
   </header>
@@ -156,7 +171,6 @@
         resultDescription.textContent = "You are trapped in an infinite cycle of preparation and planning. You need external structure to break the pattern and start executing.";
       }
 
-      // Smooth scroll down to the results box so the user sees it immediately
       resultsBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     });
   </script>

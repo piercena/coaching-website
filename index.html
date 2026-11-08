@@ -117,8 +117,19 @@
       <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
         <a href="/#philosophy" class="text-m3-on-surface-variant hover:text-m3-primary transition-colors">Philosophy</a>
         <a href="/#method" class="text-m3-on-surface-variant hover:text-m3-primary transition-colors">The Method</a>
-        <a href="/#offer" class="text-m3-on-surface-variant hover:text-m3-primary transition-colors">The Sprint</a>
-        <a href="audit.html" class="text-m3-accent hover:opacity-80 transition-colors font-semibold">Free Audit</a>
+        
+        <!-- Offerings Dropdown Menu -->
+        <div class="relative group">
+          <button class="flex items-center space-x-1 text-m3-on-surface-variant hover:text-m3-primary transition-colors py-2 cursor-pointer">
+            <span>Offerings</span>
+            <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+          </button>
+          <div class="absolute left-0 mt-1 w-44 bg-m3-surface border border-m3-outline rounded-m3-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2 z-50">
+            <a href="/#offer" class="block px-4 py-2 text-sm text-m3-on-surface-variant hover:bg-m3-surface-variant hover:text-m3-primary transition-colors">Momentum</a>
+            <a href="audit.html" class="block px-4 py-2 text-sm text-m3-on-surface-variant hover:bg-m3-surface-variant hover:text-m3-primary transition-colors">Audit</a>
+          </div>
+        </div>
+
         <a href="/#newsletter" class="text-m3-on-surface-variant hover:text-m3-primary transition-colors">Newsletter</a>
         <a href="about.html" class="text-m3-on-surface-variant hover:text-m3-primary transition-colors">About</a>
         <a href="https://cal.com/nicholas-pierce-mcbbsl/30min" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-m3-full bg-m3-primary text-sm font-semibold transition-transform hover:scale-[1.02] active:scale-95 shadow-sm text-white cursor-pointer inline-flex items-center justify-center">
@@ -138,8 +149,14 @@
     <div class="flex flex-col space-y-4 font-medium text-sm">
       <a href="/#philosophy" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant">Philosophy</a>
       <a href="/#method" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant">The Method</a>
-      <a href="/#offer" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant">The Sprint</a>
-      <a href="audit.html" onclick="toggleMobileMenu()" class="text-m3-accent font-semibold">Free Audit</a>
+      
+      <!-- Mobile Offerings Sub-list -->
+      <div class="pl-4 border-l-2 border-m3-outline flex flex-col space-y-3 py-1">
+        <span class="text-xs uppercase tracking-widest text-m3-accent font-bold">Offerings</span>
+        <a href="/#offer" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant">Momentum</a>
+        <a href="audit.html" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant">Audit</a>
+      </div>
+
       <a href="/#newsletter" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant">Newsletter</a>
       <a href="about.html" onclick="toggleMobileMenu()" class="text-m3-on-surface-variant">About</a>
       <a href="https://cal.com/nicholas-pierce-mcbbsl/30min" target="_blank" rel="noopener noreferrer" class="w-full text-center py-3 rounded-m3-full bg-m3-primary font-semibold text-white block">
@@ -173,7 +190,7 @@
         </a>
         
         <a href="#offer" class="w-full sm:w-auto px-8 py-4 rounded-m3-full border-2 border-m3-primary/80 hover:border-m3-primary text-m3-primary hover:bg-m3-surface-variant/60 text-base font-semibold transition-all flex items-center justify-center space-x-2 shadow-sm">
-          <span>View The Sprint</span>
+          <span>View Momentum</span>
           <span class="material-symbols-outlined text-lg">arrow_downward</span>
         </a>
       </div>

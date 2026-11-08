@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full">
+<html lang="en" class="h-full scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Freedom From Anxiety Meditation</title>
+  <title>Freedom From Anxiety Meditation | Nick Pierce</title>
   
   <!-- Favicon Meta Tags -->
   <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
@@ -15,144 +15,95 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Material Symbols Outlined -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            serif: ['Newsreader', 'serif'],
-          },
-          borderRadius: {
-            'm3-xl': '24px',
-            'm3-lg': '16px',
-            'm3-full': '9999px',
+            sans: ['Inter', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
           }
         }
       }
     }
   </script>
-
-  <style>
-    :root {
-      --color-primary: #12181D;
-      --color-on-primary: #FFFFFF;
-      --color-primary-container: #2A363F;
-      --color-on-primary-container: #E2E8F0;
-      --color-background: #F4EFE6;
-      --color-surface: #FCFAF7;
-      --color-surface-variant: #EAE3D5;
-      --color-on-surface: #1C2024;
-      --color-on-surface-variant: #454E56;
-      --color-accent: #C4342B;
-      --color-on-accent: #F4EFE6;
-      --color-secondary: #3E7C74;
-      --color-outline: #D0C6B5;
-    }
-
-    body {
-      background-color: var(--color-background);
-      color: var(--color-on-surface);
-      font-family: 'Plus Jakarta Sans', sans-serif;
-    }
-
-    .font-serif { font-family: 'Newsreader', Georgia, serif; }
-
-    .bg-m3-surface { background-color: var(--color-surface); }
-    .bg-m3-surface-variant { background-color: var(--color-surface-variant); }
-    .bg-m3-primary { background-color: var(--color-primary); color: var(--color-on-primary); }
-    .bg-m3-accent { background-color: var(--color-accent); color: var(--color-on-accent); }
-    .text-m3-primary { color: var(--color-primary); }
-    .text-m3-on-surface { color: var(--color-on-surface); }
-    .text-m3-on-surface-variant { color: var(--color-on-surface-variant); }
-    .text-m3-accent { color: var(--color-accent); }
-    .text-m3-secondary { color: var(--color-secondary); }
-    .border-m3-outline { border-color: var(--color-outline); }
-
-    .m3-shadow-1 { box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 4px 12px rgba(0, 0, 0, 0.02); }
-    .m3-shadow-2 { box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.06), 0px 2px 8px rgba(0, 0, 0, 0.03); }
-    .m3-shadow-3 { box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.08), 0px 4px 16px rgba(0, 0, 0, 0.04); }
-  </style>
 </head>
-<body class="h-full flex flex-col font-sans pt-24" id="app-root">
+<body class="h-full flex flex-col bg-[#F4EFE6] text-zinc-900 selection:bg-[#C4342B] selection:text-white pt-24" id="app-root">
 
   <!-- INJECTED HEADER -->
   <div id="site-header"></div>
 
   <main class="flex-grow py-12 sm:py-20 px-6">
-    <article class="max-w-3xl mx-auto bg-m3-surface p-8 sm:p-14 rounded-m3-xl border border-m3-outline space-y-12 m3-shadow-2">
+    <article class="max-w-3xl mx-auto bg-white p-8 sm:p-14 rounded-lg border border-zinc-200 shadow-sm space-y-12">
       
       <!-- Title & Header -->
-      <div class="space-y-4 text-center border-b border-m3-outline pb-8">
-        <span class="text-xs uppercase tracking-widest text-m3-accent font-bold">Tactical Practice</span>
-        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-m3-on-surface">Freedom from Anxiety Meditation</h1>
-        <p class="text-base sm:text-lg text-m3-on-surface-variant max-w-xl mx-auto leading-relaxed">
+      <div class="space-y-4 text-center border-b border-zinc-200 pb-8">
+        <span class="text-xs uppercase tracking-widest text-[#C4342B] font-bold">Tactical Practice</span>
+        <h1 class="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-zinc-900">Freedom from Anxiety Meditation</h1>
+        <p class="text-base sm:text-lg text-zinc-600 max-w-xl mx-auto leading-relaxed">
           A meditation to isolate, strip power from, and neutralize anxiety.
         </p>
       </div>
 
       <!-- The Discovery Section -->
-      <div class="space-y-6 text-m3-on-surface-variant text-base sm:text-lg leading-relaxed">
-        <h2 class="text-xs uppercase tracking-widest text-m3-secondary font-bold">The Discovery</h2>
+      <div class="space-y-6 text-zinc-700 text-base sm:text-lg leading-relaxed">
+        <h2 class="text-xs uppercase tracking-widest text-[#3E7C74] font-bold">The Discovery</h2>
         <p>
           I discovered this process after stepping out of my long-term men's community to study with a new group. Surrounding myself with new faces triggered deep anxiety and self-doubt. My mind flooded with fears: <em>Am I doing this right? Am I competent? Do I even belong here?</em> I was getting stuck inside my head and losing out on all the value of the meeting.
         </p>
         <p>
-          After the process we did a group harvest and I shared with the group my underlying, fear-based belief, out loud: <strong>"I don't belong here."</strong> Simply expressing this fear opened up space to move through the anxiety and get unstucker for the rest of the evening. It became the foundation for a repeatable meditation practice designed to release sticky limiting beliefs.
+          After the process we did a group harvest and I shared with the group my underlying, fear-based belief, out loud: <strong class="font-semibold text-zinc-900">"I don't belong here."</strong> Simply expressing this fear opened up space to move through the anxiety and get unstuck for the rest of the evening. It became the foundation for a repeatable meditation practice designed to release sticky limiting beliefs.
         </p>
       </div>
 
       <!-- The Practice Steps -->
-      <div class="space-y-8 pt-4 border-t border-m3-outline">
-        <h2 class="text-2xl font-bold text-m3-on-surface">Step-by-Step Protocol</h2>
+      <div class="space-y-8 pt-4 border-t border-zinc-200">
+        <h2 class="font-serif text-2xl font-bold text-zinc-900">Step-by-Step Protocol</h2>
         
         <div class="space-y-6">
-          <div class="p-6 bg-m3-surface-variant rounded-m3-lg border border-m3-outline space-y-2">
-            <span class="text-xs font-bold uppercase tracking-widest text-m3-accent">Step 1</span>
-            <h3 class="font-bold text-m3-on-surface text-lg">Identify Your Core Fear</h3>
-            <p class="text-sm text-m3-on-surface-variant leading-relaxed">
+          <div class="p-6 bg-zinc-50 rounded-lg border border-zinc-200 space-y-2">
+            <span class="text-xs font-bold uppercase tracking-widest text-[#C4342B]">Step 1</span>
+            <h3 class="font-bold text-zinc-900 text-lg">Identify Your Core Fear</h3>
+            <p class="text-sm text-zinc-600 leading-relaxed">
               Pinpoint the specific narrative running in your mind (e.g., <em>"I don't belong," "I am failing,"</em> or <em>"They will judge me"</em>).
             </p>
           </div>
 
-          <div class="p-6 bg-m3-surface-variant rounded-m3-lg border border-m3-outline space-y-2">
-            <span class="text-xs font-bold uppercase tracking-widest text-m3-accent">Step 2</span>
-            <h3 class="font-bold text-m3-on-surface text-lg">Set a 10-Minute Interval Timer</h3>
-            <p class="text-sm text-m3-on-surface-variant leading-relaxed">
+          <div class="p-6 bg-zinc-50 rounded-lg border border-zinc-200 space-y-2">
+            <span class="text-xs font-bold uppercase tracking-widest text-[#C4342B]">Step 2</span>
+            <h3 class="font-bold text-zinc-900 text-lg">Set a 10-Minute Interval Timer</h3>
+            <p class="text-sm text-zinc-600 leading-relaxed">
               Set a timer for 10 minutes configured to chime every 60 seconds (apps like Insight Timer work well). The chimes keep you anchored in the practice.
             </p>
           </div>
 
-          <div class="p-6 bg-m3-surface-variant rounded-m3-lg border border-m3-outline space-y-2">
-            <span class="text-xs font-bold uppercase tracking-widest text-m3-accent">Step 3</span>
-            <h3 class="font-bold text-m3-on-surface text-lg">Repeat with Shifted Emphasis</h3>
-            <p class="text-sm text-m3-on-surface-variant leading-relaxed mb-3">
+          <div class="p-6 bg-zinc-50 rounded-lg border border-zinc-200 space-y-2">
+            <span class="text-xs font-bold uppercase tracking-widest text-[#C4342B]">Step 3</span>
+            <h3 class="font-bold text-zinc-900 text-lg">Repeat with Shifted Emphasis</h3>
+            <p class="text-sm text-zinc-600 leading-relaxed mb-3">
               Each time the bell chimes, repeat your phrase three times, emphasizing a different word each time:
             </p>
-            <ul class="text-sm font-mono text-m3-primary bg-m3-surface p-4 rounded-lg border border-m3-outline space-y-1">
-              <li>• “<strong class="text-m3-accent">I</strong> don’t belong”</li>
-              <li>• “I <strong class="text-m3-accent">don't</strong> belong”</li>
-              <li>• “I don’t <strong class="text-m3-accent">belong</strong>”</li>
+            <ul class="text-sm font-mono text-zinc-900 bg-white p-4 rounded-md border border-zinc-200 space-y-1">
+              <li>• “<strong class="text-[#C4342B]">I</strong> don’t belong”</li>
+              <li>• “I <strong class="text-[#C4342B]">don't</strong> belong”</li>
+              <li>• “I don’t <strong class="text-[#C4342B]">belong</strong>”</li>
             </ul>
           </div>
 
-          <div class="p-6 bg-m3-surface-variant rounded-m3-lg border border-m3-outline space-y-2">
-            <span class="text-xs font-bold uppercase tracking-widest text-m3-accent">Step 4</span>
-            <h3 class="font-bold text-m3-on-surface text-lg">Observe and Exaggerate</h3>
-            <p class="text-sm text-m3-on-surface-variant leading-relaxed">
+          <div class="p-6 bg-zinc-50 rounded-lg border border-zinc-200 space-y-2">
+            <span class="text-xs font-bold uppercase tracking-widest text-[#C4342B]">Step 4</span>
+            <h3 class="font-bold text-zinc-900 text-lg">Observe and Exaggerate</h3>
+            <p class="text-sm text-zinc-600 leading-relaxed">
               Between chimes, sit in silence and watch your thoughts. As the session progresses, experiment with tone, volume, or dramatic emphasis to push out any stuck energy. The more exaggerated it feels, the more effective the release.
             </p>
           </div>
 
-          <div class="p-6 bg-m3-surface-variant rounded-m3-lg border border-m3-outline space-y-2">
-            <span class="text-xs font-bold uppercase tracking-widest text-m3-accent">Step 5</span>
-            <h3 class="font-bold text-m3-on-surface text-lg">Release and Integrate</h3>
-            <p class="text-sm text-m3-on-surface-variant leading-relaxed">
+          <div class="p-6 bg-zinc-50 rounded-lg border border-zinc-200 space-y-2">
+            <span class="text-xs font-bold uppercase tracking-widest text-[#C4342B]">Step 5</span>
+            <h3 class="font-bold text-zinc-900 text-lg">Release and Integrate</h3>
+            <p class="text-sm text-zinc-600 leading-relaxed">
               By the end of 10 minutes, the phrase will lose its emotional weight. For me it actually starts to sound a bit ridiculous and I can laugh at myself a little bit for being so concerned with it. Repetition neutralizes the words until they become meaningless rather than frightening absolute truths.
             </p>
           </div>
@@ -160,29 +111,30 @@
       </div>
 
       <!-- Why It Works Section -->
-      <div class="space-y-4 pt-6 border-t border-m3-outline text-m3-on-surface-variant text-base sm:text-lg leading-relaxed">
-        <h2 class="text-xs uppercase tracking-widest text-m3-secondary font-bold">Why It Works</h2>
+      <div class="space-y-4 pt-6 border-t border-zinc-200 text-zinc-700 text-base sm:text-lg leading-relaxed">
+        <h2 class="text-xs uppercase tracking-widest text-[#3E7C74] font-bold">Why It Works</h2>
         <p>
           This exercise moves you into self-acceptance. When we fight or resist fear stories, we drain our energy and give it to something that is not serving our momentum. The leak is what keeps us stuck.
         </p>
-        <blockquote class="p-6 rounded-2xl bg-m3-surface-variant border-l-4 border-m3-accent text-m3-on-surface font-serif italic text-lg m3-shadow-1">
+        <blockquote class="p-6 rounded-lg bg-zinc-50 border-l-4 border-[#C4342B] text-zinc-900 font-serif italic text-lg shadow-sm">
           "Accepting and playing with the fear removes its hold over us, giving us freedom from anxiety and allowing us to stay present with reality."
         </blockquote>
       </div>
 
       <!-- Conversion Call to Action -->
-      <div class="bg-m3-surface-variant p-8 rounded-m3-xl border-2 border-m3-accent space-y-4 text-center mt-12">
+      <div class="bg-zinc-900 text-white p-8 rounded-xl border border-zinc-800 space-y-4 text-center mt-12 shadow-md">
         <div class="space-y-1">
-          <span class="text-xs font-bold uppercase tracking-widest text-m3-accent">Take the Next Step</span>
-          <h3 class="text-2xl font-bold text-m3-on-surface">Ready to Clear Mental Clutter and Build Momentum?</h3>
+          <span class="text-xs font-bold uppercase tracking-widest text-[#C4342B]">Take the Next Step</span>
+          <h3 class="font-serif text-2xl font-bold text-white">Ready to Clear Mental Clutter and Build Momentum?</h3>
         </div>
-        <p class="text-sm sm:text-base text-m3-on-surface-variant max-w-md mx-auto leading-relaxed">
+        <p class="text-sm sm:text-base text-zinc-300 max-w-md mx-auto leading-relaxed">
           Let’s lock in your execution framework and translate your clarity into unshakeable forward motion.
         </p>
         <div class="pt-2">
-          <a href="https://cal.com/nicholas-pierce-mcbbsl/30min" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 px-8 py-4 rounded-m3-full bg-m3-accent text-m3-on-accent font-semibold text-base hover:opacity-90 transition-all shadow-md">
+          <a href="https://cal.com/nicholas-pierce-mcbbsl/30min" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 px-8 py-4 rounded-sm bg-[#C4342B] text-white font-semibold text-base hover:bg-[#a82b23] transition-all shadow-sm">
             <span>Book Your Clarity Call</span>
-            <span class="material-symbols-outlined text-base">arrow_forward</span>
+            <!-- Inline SVG Line-art Arrow -->
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
           </a>
         </div>
       </div>
@@ -195,11 +147,6 @@
 
   <!-- COMPONENT LOADER SCRIPT -->
   <script>
-    function toggleMobileMenu() {
-      const menu = document.getElementById('mobile-menu');
-      if (menu) menu.classList.toggle('hidden');
-    }
-
     async function loadComponents() {
       try {
         const headerRes = await fetch('header.html');

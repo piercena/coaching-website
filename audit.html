@@ -9,11 +9,10 @@
   <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
   <link rel="apple-touch-icon" href="logo.png">
 
-  <!-- Google Fonts & Material Symbols -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -22,104 +21,78 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-          },
-          colors: {
-            'm3-surface': '#FCFAF7',
-            'm3-surface-variant': '#EAE3D5',
-            'm3-on-surface': '#1C2024',
-            'm3-on-surface-variant': '#454E56',
-            'm3-accent': '#C4342B',
-            'm3-on-accent': '#F4EFE6',
-            'm3-primary': '#12181D',
-            'm3-outline': '#D0C6B5',
-            'm3-green': '#3E7C74',
-            'm3-yellow': '#D9A441',
-          },
-          borderRadius: {
-            'm3-lg': '16px',
-            'm3-xl': '24px',
-            'm3-full': '9999px',
-          },
-          boxShadow: {
-            'm3-2': '0px 6px 20px rgba(0, 0, 0, 0.06), 0px 2px 8px rgba(0, 0, 0, 0.03)',
+            sans: ['Inter', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
           }
         }
       }
     }
   </script>
-  <style>
-    :root {
-      --color-background: #F4EFE6;
-      --color-on-surface: #1C2024;
-      --color-outline: #D0C6B5;
-    }
-    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--color-background); color: var(--color-on-surface); }
-  </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between selection:bg-m3-accent selection:text-white pt-24">
+<body class="min-h-screen flex flex-col justify-between bg-[#F4EFE6] text-zinc-900 selection:bg-[#C4342B] selection:text-white pt-24">
 
   <!-- INJECTED HEADER -->
   <div id="site-header"></div>
 
   <!-- MAIN AUDIT SECTION -->
   <main class="py-12 sm:py-20 px-6 max-w-3xl mx-auto w-full flex-grow">
-    <div class="bg-m3-surface p-8 sm:p-12 rounded-m3-xl border border-m3-outline space-y-8 m3-shadow-2">
+    <div class="bg-white p-8 sm:p-12 rounded-lg border border-zinc-200 shadow-sm space-y-8">
       
       <div class="space-y-3 text-center">
-        <span class="text-xs uppercase tracking-widest text-m3-accent font-bold">Interactive Diagnostic</span>
-        <h1 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-m3-on-surface">Where are you over-analyzing?</h1>
-        <p class="text-sm sm:text-base text-m3-on-surface-variant max-w-lg mx-auto leading-relaxed">
-          Check any of the friction points below that are currently keeping you stuck, then click submit to calculate your execution score.
+        <span class="text-xs uppercase tracking-widest text-[#C4342B] font-bold">Interactive Diagnostic</span>
+        <h1 class="font-serif text-3xl sm:text-4xl font-bold tracking-tight text-zinc-900">Where are you over-analyzing?</h1>
+        <p class="text-sm sm:text-base text-zinc-600 max-w-lg mx-auto leading-relaxed">
+          Check any of the friction points below that are currently keeping you stuck, then click calculate to determine your execution score.
         </p>
       </div>
 
       <!-- Audit Form Checklist -->
       <form id="audit-form" class="space-y-4" onsubmit="return false;">
-        <label class="flex items-start space-x-3 p-4 rounded-m3-lg bg-m3-surface-variant border border-m3-outline cursor-pointer hover:border-m3-primary transition-all">
-          <input type="checkbox" name="bottleneck" value="1" class="mt-1 h-4 w-4 rounded border-m3-outline text-m3-accent focus:ring-m3-accent">
-          <span class="text-sm text-m3-on-surface"><strong>1. Waiting for 100% Certainty:</strong> Delaying a choice because you want guarantees that every outcome will go smoothly.</span>
+        <label class="flex items-start space-x-3 p-4 rounded-md bg-zinc-50 border border-zinc-200 cursor-pointer hover:border-zinc-400 transition-all">
+          <input type="checkbox" name="bottleneck" value="1" class="mt-1 h-4 w-4 rounded border-zinc-300 text-[#C4342B] focus:ring-[#C4342B]">
+          <span class="text-sm text-zinc-800"><strong class="font-semibold text-zinc-900">1. Waiting for 100% Certainty:</strong> Delaying a choice because you want guarantees that every outcome will go smoothly.</span>
         </label>
 
-        <label class="flex items-start space-x-3 p-4 rounded-m3-lg bg-m3-surface-variant border border-m3-outline cursor-pointer hover:border-m3-primary transition-all">
-          <input type="checkbox" name="bottleneck" value="1" class="mt-1 h-4 w-4 rounded border-m3-outline text-m3-accent focus:ring-m3-accent">
-          <span class="text-sm text-m3-on-surface"><strong>2. Over-Complicating the Setup:</strong> Spending hours planning, organizing, or building elaborate systems before taking actual steps.</span>
+        <label class="flex items-start space-x-3 p-4 rounded-md bg-zinc-50 border border-zinc-200 cursor-pointer hover:border-zinc-400 transition-all">
+          <input type="checkbox" name="bottleneck" value="1" class="mt-1 h-4 w-4 rounded border-zinc-300 text-[#C4342B] focus:ring-[#C4342B]">
+          <span class="text-sm text-zinc-800"><strong class="font-semibold text-zinc-900">2. Over-Complicating the Setup:</strong> Spending hours planning, organizing, or building elaborate systems before taking actual steps.</span>
         </label>
 
-        <label class="flex items-start space-x-3 p-4 rounded-m3-lg bg-m3-surface-variant border border-m3-outline cursor-pointer hover:border-m3-primary transition-all">
-          <input type="checkbox" name="bottleneck" value="1" class="mt-1 h-4 w-4 rounded border-m3-outline text-m3-accent focus:ring-m3-accent">
-          <span class="text-sm text-m3-on-surface"><strong>3. Research as an Escape:</strong> Reading articles, buying books, or asking others for opinions instead of just pulling the trigger.</span>
+        <label class="flex items-start space-x-3 p-4 rounded-md bg-zinc-50 border border-zinc-200 cursor-pointer hover:border-zinc-400 transition-all">
+          <input type="checkbox" name="bottleneck" value="1" class="mt-1 h-4 w-4 rounded border-zinc-300 text-[#C4342B] focus:ring-[#C4342B]">
+          <span class="text-sm text-zinc-800"><strong class="font-semibold text-zinc-900">3. Research as an Escape:</strong> Reading articles, buying books, or asking others for opinions instead of just pulling the trigger.</span>
         </label>
 
-        <label class="flex items-start space-x-3 p-4 rounded-m3-lg bg-m3-surface-variant border border-m3-outline cursor-pointer hover:border-m3-primary transition-all">
-          <input type="checkbox" name="bottleneck" value="1" class="mt-1 h-4 w-4 rounded border-m3-outline text-m3-accent focus:ring-m3-accent">
-          <span class="text-sm text-m3-on-surface"><strong>4. Avoiding the Real Work:</strong> Filling your day with safe, minor tasks because the actual challenge feels too big or ambiguous.</span>
+        <label class="flex items-start space-x-3 p-4 rounded-md bg-zinc-50 border border-zinc-200 cursor-pointer hover:border-zinc-400 transition-all">
+          <input type="checkbox" name="bottleneck" value="1" class="mt-1 h-4 w-4 rounded border-zinc-300 text-[#C4342B] focus:ring-[#C4342B]">
+          <span class="text-sm text-zinc-800"><strong class="font-semibold text-zinc-900">4. Avoiding the Real Work:</strong> Filling your day with safe, minor tasks because the actual challenge feels too big or ambiguous.</span>
         </label>
 
-        <label class="flex items-start space-x-3 p-4 rounded-m3-lg bg-m3-surface-variant border border-m3-outline cursor-pointer hover:border-m3-primary transition-all">
-          <input type="checkbox" name="bottleneck" value="1" class="mt-1 h-4 w-4 rounded border-m3-outline text-m3-accent focus:ring-m3-accent">
-          <span class="text-sm text-m3-on-surface"><strong>5. Spinning in Your Head:</strong> Re-running the same scenarios inside your mind over and over without any outside perspective to break the loop.</span>
+        <label class="flex items-start space-x-3 p-4 rounded-md bg-zinc-50 border border-zinc-200 cursor-pointer hover:border-zinc-400 transition-all">
+          <input type="checkbox" name="bottleneck" value="1" class="mt-1 h-4 w-4 rounded border-zinc-300 text-[#C4342B] focus:ring-[#C4342B]">
+          <span class="text-sm text-zinc-800"><strong class="font-semibold text-zinc-900">5. Spinning in Your Head:</strong> Re-running the same scenarios inside your mind over and over without any outside perspective to break the loop.</span>
         </label>
 
         <!-- Submit Button -->
         <div class="pt-4 text-center">
-          <button type="button" id="submit-audit" class="w-full sm:w-auto px-8 py-4 rounded-m3-full bg-m3-primary hover:bg-black text-white text-base font-semibold transition-all shadow-md cursor-pointer">
+          <button type="button" id="submit-audit" class="w-full sm:w-auto px-8 py-4 rounded-sm bg-zinc-900 hover:bg-[#C4342B] text-white text-base font-semibold transition-all shadow-sm cursor-pointer">
             Calculate My Results
           </button>
         </div>
       </form>
 
       <!-- Results Box (Hidden by Default) -->
-      <div id="audit-results" class="hidden p-6 sm:p-8 rounded-m3-lg border-2 space-y-4 text-center transition-all">
+      <div id="audit-results" class="hidden p-6 sm:p-8 rounded-lg border space-y-4 text-center transition-all">
         <div class="space-y-1">
           <span id="result-tag" class="text-xs font-bold uppercase tracking-widest">Your Diagnostic Result</span>
-          <h2 id="result-title" class="text-xl font-bold text-m3-on-surface">--</h2>
+          <h2 id="result-title" class="font-serif text-xl font-bold text-zinc-900">--</h2>
         </div>
-        <p id="result-description" class="text-sm text-m3-on-surface-variant max-w-md mx-auto leading-relaxed">--</p>
+        <p id="result-description" class="text-sm text-zinc-600 max-w-md mx-auto leading-relaxed">--</p>
         <div class="pt-2">
-          <a id="result-cta-btn" href="https://cal.com/nicholas-pierce-mcbbsl/30min" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 px-8 py-4 rounded-m3-full font-semibold text-base transition-all shadow-md">
+          <a id="result-cta-btn" href="https://cal.com/nicholas-pierce-mcbbsl/30min" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 px-8 py-4 rounded-sm font-semibold text-base transition-all shadow-sm">
             <span id="result-cta-text">Book Your Clarity Call</span>
-            <span class="material-symbols-outlined text-base">arrow_forward</span>
+            <!-- Inline SVG Line-art Arrow -->
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
           </a>
         </div>
       </div>
@@ -132,11 +105,6 @@
 
   <!-- Calculation Script & Component Loader -->
   <script>
-    function toggleMobileMenu() {
-      const menu = document.getElementById('mobile-menu');
-      if (menu) menu.classList.toggle('hidden');
-    }
-
     async function loadComponents() {
       try {
         const headerRes = await fetch('header.html');
@@ -164,34 +132,34 @@
       
       resultsBox.classList.remove('hidden');
 
-      // Reset dynamic classes
-      resultsBox.className = "p-6 sm:p-8 rounded-m3-lg border-2 space-y-4 text-center transition-all";
-      resultCtaBtn.className = "inline-flex items-center space-x-2 px-8 py-4 rounded-m3-full font-semibold text-base transition-all shadow-md text-white";
+      // Reset dynamic classes for Executive Minimalist styling
+      resultsBox.className = "p-6 sm:p-8 rounded-lg border space-y-4 text-center transition-all";
+      resultCtaBtn.className = "inline-flex items-center space-x-2 px-8 py-4 rounded-sm font-semibold text-base transition-all shadow-sm text-white";
 
       if (checkedCount === 0) {
         // GREEN (0 out of 5)
-        resultsBox.classList.add('bg-emerald-50', 'border-emerald-500');
+        resultsBox.classList.add('bg-emerald-50', 'border-emerald-300');
         resultTag.className = "text-xs font-bold uppercase tracking-widest text-emerald-700";
         resultTitle.textContent = "Score: High Velocity (0 Friction Points)";
         resultDescription.textContent = "Your momentum is entirely clear. You process uncertainty efficiently and translate choices straight into action without getting bogged down.";
         resultCtaText.textContent = "Schedule a Momentum Calibration Call";
-        resultCtaBtn.classList.add('bg-emerald-600', 'hover:bg-emerald-700');
+        resultCtaBtn.classList.add('bg-emerald-700', 'hover:bg-emerald-800');
       } else if (checkedCount === 1) {
         // YELLOW (1 out of 5)
-        resultsBox.classList.add('bg-amber-50', 'border-amber-500');
+        resultsBox.classList.add('bg-amber-50', 'border-amber-300');
         resultTag.className = "text-xs font-bold uppercase tracking-widest text-amber-700";
         resultTitle.textContent = "Score: Minor Friction (1 Point Detected)";
         resultDescription.textContent = "You're moving well, but one specific blind spot is quietly bleeding energy. Catching it now prevents a full stall.";
         resultCtaText.textContent = "Fine-Tune Your Execution Speed";
-        resultCtaBtn.classList.add('bg-amber-600', 'hover:bg-amber-700');
+        resultCtaBtn.classList.add('bg-amber-700', 'hover:bg-amber-800');
       } else {
         // RED (2 or more out of 5)
-        resultsBox.classList.add('bg-red-50', 'border-m3-accent');
-        resultTag.className = "text-xs font-bold uppercase tracking-widest text-m3-accent";
+        resultsBox.classList.add('bg-red-50', 'border-red-200');
+        resultTag.className = "text-xs font-bold uppercase tracking-widest text-[#C4342B]";
         resultTitle.textContent = `Score: Execution Stall (${checkedCount} Friction Points)`;
         resultDescription.textContent = "You are trapped in a loop of over-analysis and preparation. You need external structure to break the pattern and start executing.";
         resultCtaText.textContent = "Book Your Clarity Call";
-        resultCtaBtn.classList.add('bg-m3-accent', 'hover:opacity-90');
+        resultCtaBtn.classList.add('bg-[#C4342B]', 'hover:bg-[#a82b23]');
       }
 
       resultsBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });

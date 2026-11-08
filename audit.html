@@ -59,26 +59,8 @@
 </head>
 <body class="min-h-screen flex flex-col justify-between selection:bg-m3-accent selection:text-white pt-24">
 
-  <!-- TOP NAVIGATION BAR -->
-  <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#F4EFE6]/90 border-b border-m3-outline/40 py-4 px-6 sm:px-12 transition-all">
-    <div class="max-w-7xl mx-auto w-full flex items-center justify-between">
-      <a href="index.html" class="flex items-center space-x-3 group">
-        <div class="w-10 h-10 rounded-lg overflow-hidden flex items-center justify-center shrink-0">
-          <img src="logo.png" alt="Logo" class="w-full h-full object-contain">
-        </div>
-        <div class="flex flex-col">
-          <span class="font-bold text-base text-m3-on-surface leading-none group-hover:text-m3-accent transition-colors">Nick Pierce</span>
-        </div>
-      </a>
-
-      <!-- Booking CTA Button -->
-      <nav class="flex items-center">
-        <a href="https://cal.com/nicholas-pierce-mcbbsl/30min" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-m3-full bg-m3-primary text-sm font-semibold transition-transform hover:scale-[1.02] active:scale-95 shadow-sm text-white cursor-pointer inline-flex items-center justify-center">
-          Book a Call
-        </a>
-      </nav>
-    </div>
-  </header>
+  <!-- INJECTED HEADER -->
+  <div id="site-header"></div>
 
   <!-- MAIN AUDIT SECTION -->
   <main class="py-12 sm:py-20 px-6 max-w-3xl mx-auto w-full flex-grow">
@@ -145,13 +127,30 @@
     </div>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="w-full border-t border-m3-outline py-6 px-6 text-center text-xs text-m3-on-surface-variant">
-    <p>&copy; 2026 Nick Pierce. All rights reserved.</p>
-  </footer>
+  <!-- INJECTED FOOTER -->
+  <div id="site-footer"></div>
 
-  <!-- Calculation Script with Dynamic Colors & CTAs -->
+  <!-- Calculation Script & Component Loader -->
   <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      if (menu) menu.classList.toggle('hidden');
+    }
+
+    async function loadComponents() {
+      try {
+        const headerRes = await fetch('header.html');
+        document.getElementById('site-header').innerHTML = await headerRes.text();
+
+        const footerRes = await fetch('footer.html');
+        document.getElementById('site-footer').innerHTML = await footerRes.text();
+      } catch (e) {
+        console.error('Error loading layout components:', e);
+      }
+    }
+
+    loadComponents();
+
     const submitBtn = document.getElementById('submit-audit');
     const resultsBox = document.getElementById('audit-results');
     const resultTag = document.getElementById('result-tag');

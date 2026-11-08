@@ -41,13 +41,13 @@
 
   <style>
     /* ==========================================
-       MATERIAL 3 COLOR SYSTEM (MODULAR PALETTE)
-       To swap color palettes in the future, simply edit 
-       the HEX values in this :root block.
-       ========================================== */
+        MATERIAL 3 COLOR SYSTEM (MODULAR PALETTE)
+        To swap color palettes in the future, simply edit 
+        the HEX values in this :root block.
+        ========================================== */
     :root {
       /* Primary Brand Tones */
-      --color-primary: #12181D;              /* Slate Charcoal */
+      --color-primary: #12181D;             /* Slate Charcoal */
       --color-on-primary: #FFFFFF;
       --color-primary-container: #2A363F;
       --color-on-primary-container: #E2E8F0;
@@ -61,10 +61,10 @@
       --color-on-surface-variant: #454E56;
       
       /* Accents & Highlights */
-    --color-accent: #C4342B;               /* Crimson Terracotta Accent */
-    --color-on-accent: #F4EFE6;            /* Warm Linen High Contrast Text */
+    --color-accent: #C4342B;                /* Crimson Terracotta Accent */
+    --color-on-accent: #F4EFE6;             /* Warm Linen High Contrast Text */
     
-    --color-secondary: #3E7C74;            /* Deep Sage / Teal */
+    --color-secondary: #3E7C74;             /* Deep Sage / Teal */
       --color-secondary-container: #E2EFEF;
       --color-on-secondary-container: #1C403B;
 
@@ -128,10 +128,15 @@
       </div>
     </a>
 
-    <!-- Navigation Links -->
-    <button data-cal-link="nicholas-pierce-mcbbsl/30min" data-cal-config='{"layout":"month_view"}' class="px-5 py-2.5 rounded-m3-full bg-m3-primary text-sm font-semibold transition-transform hover:scale-[1.02] active:scale-95 shadow-sm text-white cursor-pointer">
-      Book a Call
-    </button>
+    <!-- Navigation Links & Booking CTA -->
+    <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+      <a href="#philosophy" class="text-m3-on-surface-variant hover:text-m3-primary transition-colors">Philosophy</a>
+      <a href="#method" class="text-m3-on-surface-variant hover:text-m3-primary transition-colors">The Method</a>
+      <a href="#daily-insights" class="text-m3-on-surface-variant hover:text-m3-primary transition-colors">Daily Insights</a>
+      <button data-cal-link="nicholas-pierce-mcbbsl/30min" data-cal-config='{"layout":"month_view"}' class="px-5 py-2.5 rounded-m3-full bg-m3-primary text-sm font-semibold transition-transform hover:scale-[1.02] active:scale-95 shadow-sm text-white cursor-pointer">
+        Book a Call
+      </button>
+    </nav>
 
     <!-- Mobile menu toggle button -->
     <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-lg bg-m3-surface-variant text-m3-on-surface" aria-label="Toggle Navigation Menu">
@@ -369,7 +374,6 @@
       </div>
     </section>
 
-    <!-- CAL.COM SCHEDULING INTEGRATION SECTION -->
     <!-- CAL.COM SCHEDULING INTEGRATION SECTION -->
     <section id="schedule" class="py-16 sm:py-24 px-6 sm:px-12 bg-m3-surface border-t border-m3-outline">
       <div class="max-w-4xl mx-auto text-center space-y-6">

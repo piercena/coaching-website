@@ -141,77 +141,52 @@
 
   <main class="flex-grow">
     
-    <!-- HERO SECTION -->
-    <section class="py-12 sm:py-24 px-6 sm:px-12 max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
-        <div class="lg:col-span-7 space-y-8">
-          <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-m3-full bg-m3-secondary-container text-xs font-semibold tracking-wide uppercase">
-            <span class="material-symbols-outlined text-sm">north_east</span>
-            <span>Alignment • Motion • Purpose</span>
-          </div>
-
-          <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-m3-on-surface leading-[1.12]">
-            Reflect on the past.<br>
-            Be with the present.<br>
-            <span class="font-serif italic font-normal text-m3-accent">Take action</span> for your future.
-          </h1>
-
-          <p class="text-lg sm:text-xl text-m3-on-surface-variant max-w-2xl font-normal leading-relaxed">
-            Being stuck isn’t a dead end. It's a wake-up call! But the most dangerous place to be is wondering where the magic of life has gone and why it isn't coming back.
-          </p>
-
-          <!-- CTAs -->
-          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
-            <a href="https://cal.com/nicholas-pierce-mcbbsl/30min" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-m3-full bg-m3-accent hover:opacity-90 text-m3-on-accent text-base font-semibold transition-all shadow-md flex items-center justify-center space-x-3 group cursor-pointer">
-              <span>Schedule 1:1 Conversation</span>
-              <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
-            </a>
-            <!-- Sharpened Outline Button -->
-            <a href="#daily-insights" class="px-8 py-4 rounded-m3-full border-2 border-m3-primary/80 hover:border-m3-primary text-m3-primary hover:bg-m3-surface-variant/60 text-base font-semibold transition-all flex items-center justify-center space-x-2 shadow-sm">
-              <span>Receive Daily Reflections</span>
-              <span class="material-symbols-outlined text-lg">mail</span>
-            </a>
-          </div>
-
-          <!-- Key Guiding Principles -->
-          <div class="pt-6 border-t border-m3-outline flex flex-wrap items-center gap-6 text-xs text-m3-on-surface-variant font-medium">
-            <div class="flex items-center space-x-2">
-              <span class="material-symbols-outlined text-m3-secondary text-base">check_circle</span>
-              <span>No 'BS' Leadership Coaching</span>
-            </div>
-            <div class="flex items-center space-x-2">
-              <span class="material-symbols-outlined text-m3-secondary text-base">check_circle</span>
-              <span>Momentum Over Perfection</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Visual Hero Card -->
-        <div class="lg:col-span-5" id="philosophy">
-          <div class="bg-m3-surface p-8 sm:p-10 rounded-m3-xl border border-m3-outline m3-shadow-2 relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-32 h-32 bg-m3-secondary-container rounded-full blur-2xl opacity-50 -mr-10 -mt-10"></div>
-            
-            <div class="relative z-10 space-y-6">
-              <h2 class="text-2xl font-bold text-m3-on-surface">The Forward Gear</h2>
-              
-              <blockquote class="text-m3-on-surface-variant font-serif italic text-base leading-relaxed border-l-2 border-m3-accent pl-4">
-                "We don't need absolute certainty to take our next step — only courage and a direction."
-              </blockquote>
-
-              <div class="pt-4 flex items-center space-x-4">
-                <div class="w-12 h-12 rounded-full overflow-hidden border border-m3-outline shrink-0 shadow-inner">
-                  <img src="profile-ski.jpeg" alt="Nick Pierce" class="w-full h-full object-cover object-center">
-                </div>
-                <div>
-                  <div class="font-bold text-sm text-m3-on-surface">Nick Pierce</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
+    <!-- HERO SECTION (CENTERED) -->
+    <section class="py-16 sm:py-28 px-6 sm:px-12 max-w-4xl mx-auto text-center space-y-8">
+      
+      <!-- Top Tag Badge -->
+      <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-m3-full bg-m3-secondary-container text-xs font-semibold tracking-wide uppercase text-m3-on-secondary-container mx-auto">
+        <span class="material-symbols-outlined text-sm">north_east</span>
+        <span>Alignment • Motion • Purpose</span>
       </div>
+
+      <!-- Main Headline -->
+      <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-m3-on-surface leading-[1.12]">
+        Reflect on the past.<br>
+        Be with the present.<br>
+        <span class="font-serif italic font-normal text-m3-accent">Take action</span> for your future.
+      </h1>
+
+      <!-- Body Copy -->
+      <p class="text-lg sm:text-xl text-m3-on-surface-variant max-w-2xl mx-auto font-normal leading-relaxed">
+        Being stuck isn’t a dead end. It's a wake-up call! But the most dangerous place to be is wondering where the magic of life has gone and why it isn't coming back.
+      </p>
+
+      <!-- Centered Dual Call-To-Actions -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+        <a href="https://cal.com/nicholas-pierce-mcbbsl/30min" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-m3-full bg-m3-accent hover:opacity-90 text-m3-on-accent text-base font-semibold transition-all shadow-md flex items-center justify-center space-x-3 group cursor-pointer">
+          <span>Schedule 1:1 Conversation</span>
+          <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
+        </a>
+        
+        <a href="#daily-insights" class="w-full sm:w-auto px-8 py-4 rounded-m3-full border-2 border-m3-primary/80 hover:border-m3-primary text-m3-primary hover:bg-m3-surface-variant/60 text-base font-semibold transition-all flex items-center justify-center space-x-2 shadow-sm">
+          <span>Receive Daily Reflections</span>
+          <span class="material-symbols-outlined text-lg">mail</span>
+        </a>
+      </div>
+
+      <!-- Key Guiding Principles -->
+      <div class="pt-8 border-t border-m3-outline/60 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs text-m3-on-surface-variant font-medium">
+        <div class="flex items-center space-x-2">
+          <span class="material-symbols-outlined text-m3-secondary text-base">check_circle</span>
+          <span>No 'BS' Leadership Coaching</span>
+        </div>
+        <div class="flex items-center space-x-2">
+          <span class="material-symbols-outlined text-m3-secondary text-base">check_circle</span>
+          <span>Momentum Over Perfection</span>
+        </div>
+      </div>
+
     </section>
 
     <!-- THE 3 PILLARS SECTION -->

@@ -355,27 +355,47 @@
   <!-- INJECTED FOOTER -->
   <div id="site-footer"></div>
 
-  <!-- COMPONENT LOADER SCRIPT -->
   <script>
-    function toggleMobileMenu() {
-      const menu = document.getElementById('mobile-menu');
-      if (menu) menu.classList.toggle('hidden');
-    }
-
-    // Automatically load header and footer files
     async function loadComponents() {
       try {
         const headerRes = await fetch('header.html');
         document.getElementById('site-header').innerHTML = await headerRes.text();
-
+  
         const footerRes = await fetch('footer.html');
         document.getElementById('site-footer').innerHTML = await footerRes.text();
       } catch (e) {
         console.error('Error loading layout components:', e);
       }
     }
-
+  
+    // Run component loader immediately
     loadComponents();
+  
+    // Bulletproof global event delegation for mobile menu navigation
+    document.addEventListener('click', (e) => {
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+  
+      if (!btn || !menu) return;
+  
+      // 1. Toggle menu when clicking the mobile menu button
+      if (btn.contains(e.target)) {
+        e.stopPropagation();
+        menu.classList.toggle('hidden');
+        return;
+      }
+  
+      // 2. Close menu when clicking any link inside the mobile menu
+      if (menu.contains(e.target) && e.target.closest('a')) {
+        menu.classList.add('hidden');
+        return;
+      }
+  
+      // 3. Click-away: close menu if open and user clicks outside both menu and button
+      if (!menu.classList.contains('hidden') && !menu.contains(e.target) && !btn.contains(e.target)) {
+        menu.classList.add('hidden');
+      }
+    });
   </script>
 </body>
 </html>
